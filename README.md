@@ -1,7 +1,7 @@
 # Lucky-Blue
 
 # Naš glavni objekat sa svim varijablama, podacima koje će sadržavati, vrijednosti su samo primjeri
-
+function(){}
 var objekt = {
     dobitnaKombinacija: [1, 2, 3, 4, 5, 6, 7],
     userKombinacije: [
