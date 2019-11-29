@@ -2,30 +2,30 @@
 
 # Naš glavni objekat sa svim varijablama, podacima koje će sadržavati, vrijednosti su samo primjeri
 
-var objekt = {
-    dobitnaKombinacija: [1, 2, 3, 4, 5, 6, 7],
-    userKombinacije: [
-        {brojTiketa:1,komb:[1,2,3,4,5,6,7]}, 
-        {...},
-        {...},
-        ...,
-    ],
-    tiketi: [1, 2, 3, 4, 5, 6, ...],
-    dobitnici: [
-        {brojTiketa:1,komb:[1,2,3,4,5,6,7]},
-        {...},
-        {...},
-        ...,
-    ],
-    najvišePogodaka: 0,
-    pogodci: [],
-}
+var objekt = {  
+    dobitnaKombinacija: [1, 2, 3, 4, 5, 6, 7],  
+    userKombinacije: [  
+        {brojTiketa:1,komb:[1,2,3,4,5,6,7]},   
+        {...},  
+        {...},  
+        ...,  
+    ],  
+    tiketi: [1, 2, 3, 4, 5, 6, ...],  
+    dobitnici: [  
+        {brojTiketa:1,komb:[1,2,3,4,5,6,7]},  
+        {...},  
+        {...},  
+        ...,  
+    ],  
+    najvišePogodaka: 0,  
+    pogodci: [],  
+}  
 
-Zadatak ove aplikacije je slijedeći:
-    1. Generisati kombinaciju od 7 nasumičnih brojeva između 1 i 48
-        a. brojevi ne smiju biti isti
-        b. oni će biti smješteni u nizu objekt.dobitnaKombinacija
-        c. funkcija treba generisati svaki broj pojedinačno i odmah vršiti provjeru da li taj broj već postoji
+Zadatak ove aplikacije je slijedeći:  
+    1. Generisati kombinaciju od 7 nasumičnih brojeva između 1 i 48  
+        a. brojevi ne smiju biti isti  
+        b. oni će biti smješteni u nizu objekt.dobitnaKombinacija  
+        c. funkcija treba generisati svaki broj pojedinačno i odmah vršiti provjeru da li taj broj već postoji  
 
         getDobKomb = function(){}
     
