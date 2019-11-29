@@ -78,7 +78,7 @@ Zadatak br. 4.
 HTML + CSS
 
 # Amar Mujkanović
-Zadatak br. 6. i 7.
+Zadatak br. 5.
 
 # Emrah Hadžišehić
 Dizajn
@@ -90,7 +90,8 @@ Zadatak br. 2.
 Zadatak br. 3.
 
 # Skender Međić
-Zadatak br. 5.
+Zadatak br. 6. i 7.
+
 
 
 
