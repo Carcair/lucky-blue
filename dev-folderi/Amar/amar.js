@@ -1,8 +1,14 @@
+
+/*Funkcija koja će vraćati brojeve dobitne kombinacije
+a. uzima vrijednosti iz niza kao u formatu objekt.dobitnaKombinacija
+b. funkcija izbacuje svaki broj pojedinačno, znači pravimo je da vraća jedan broj */
+
+
 var kombinacija = [7,8,22,31,45,11];
 
 function provjeri(x){        
-  let pogodci = 0;           
-  for(i=0;i<x.length;i++){
+  let pogodci = 0;                        
+  for(i=0;i<x.length;i++){                
     if(kombinacija.includes(x[i]))
       ++pogodci;
   }
