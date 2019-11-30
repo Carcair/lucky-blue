@@ -44,7 +44,7 @@ function traziDobitne(){
     if(niz[t].NP < min) {
       min = niz[t];
     }
-    if(niz[t].NP>max){
+    if(niz[t].NP > max){
       max=niz[t];
     }
   }
@@ -63,3 +63,16 @@ function traziDobitne(){
 traziDobitne();
 console.log(objekt.pogodci)
 console.log(objekt.najvisePogodaka)
+
+
+// Super urađeno, jedino treba malo proljepšati, npr. uvijek odvajaš od znakova
+// tj. for(let i = 0; i < 10; i++) na ovaj način, ne moraš i++ odvajati, ali između ostalih je lijepo
+// još jedna stvar, iako ne utiče na kod nimalo, za for petlje ne moraš svaki put drugu varijablu praviti
+// odn. ne treba i, j, k, l, q i slično, jedino ako se jedna for petlja nalazi u drugoj, tj.
+/*
+for(let i = 0; i < 10; i++){
+  for(let j = 0; i < 10; j++){
+
+  }
+}
+*/
