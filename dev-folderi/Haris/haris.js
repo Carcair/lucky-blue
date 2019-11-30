@@ -39,8 +39,7 @@
          }}
         
         objekt.najvisePogodaka=max;
-        console.log(niz);
-        for(let q=0;q<niz.length;q++){
+               for(let q=0;q<niz.length;q++){
         
         if(niz[q].NP==objekt.najvisePogodaka){
           objekt.pogodci=niz[q].P;
