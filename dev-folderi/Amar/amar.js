@@ -1,7 +1,7 @@
 var kombinacija = [7,8,22,31,45,11];
 
-function provjeri(x){
-  let pogodci = 0;
+function provjeri(x){        
+  let pogodci = 0;           
   for(i=0;i<x.length;i++){
     if(kombinacija.includes(x[i]))
       ++pogodci;
