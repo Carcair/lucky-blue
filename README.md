@@ -1,6 +1,7 @@
 # Lucky-Blue
 
 prva promjena
+druga promjena
 
 # Naš glavni objekat sa svim varijablama, podacima koje će sadržavati, vrijednosti su samo primjeri
 
