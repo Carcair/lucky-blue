@@ -9,14 +9,14 @@ Zadatak ove aplikacije je slijedeći:
 
 
 var objekt = {};
-objekt.dobitnaKombinacija = []
+objekt.dobitnaKombinacija = [];
 
 //funkcija generisanja dobitne kombinacije
 
 var getDobKomb = () => {
    for(;;){
     //generisanje nasumicnog broja (takodjer se moze napraviti zasebna funkcija koja generise jedan broj, ali msm da nema potrebe)
-    var genBr = Math.floor(Math.random() * (48 - 1) + 1);
+    var genBr = Math.floor(Math.random() * 48 + 1);
     if(!objekt.dobitnaKombinacija.includes(genBr)){
       objekt.dobitnaKombinacija.push(genBr);
     }
