@@ -14,7 +14,7 @@ export default {
     .footer {
         box-sizing: border-box;
         background: cornflowerblue;
-        border: 1px solid black; 
+        border: 1px solid black;
         position: absolute;
         height: 100px; width: 100%;
         bottom: 0;
