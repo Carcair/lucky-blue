@@ -13,7 +13,8 @@ export default {
 <style scoped>
     .footer {
         box-sizing: border-box;
-        background: teal; border: 1px solid black; 
+        background: cornflowerblue;
+        border: 1px solid black; 
         position: absolute;
         height: 100px; width: 100%;
         bottom: 0;

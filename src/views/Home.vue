@@ -1,21 +1,19 @@
 <template>
   <div class="home">
-    
+    <router-link to="/game"><img src="../assets/LOGO.png" title="Lucky Blue"></router-link>
   </div>
 </template>
 
 <script>
-
-
-
 export default {
-  name: 'home',
-  components: {
-    
-  }
+  
 }
 </script>
 
-<style lang="stylus" scoped>
-
+<style scoped>
+  .home img {
+    height: 200px;
+    display: block;
+    margin: 10% auto;
+  }
 </style>
