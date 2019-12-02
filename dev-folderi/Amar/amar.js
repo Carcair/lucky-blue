@@ -24,7 +24,7 @@ u 5. samo ćeš tražiti ispis zadnjeg broja
 */
 
 
-var kombinacija = [7,8,22,31,45,11];
+
 
 /*
 function provjeri(x){        
@@ -58,4 +58,17 @@ var igraci = [
 
 igraci[0].kolikoPogodaka();
 igraci[1].kolikoPogodaka();
-*/
+*/ 
+
+/*Ispravka zadatka,stavio sam novu funkciju koju cemo poslije pozivati */ 
+
+var objekt ={};
+var kombinacija = [7,8,22,31,45,11];
+
+function getVrijednost(x){
+  return objekt.dobitnaKombinacija(x)
+};
+for(let i=0; i < objekat.dobitnaKombinacija.length; i++){
+  console.log(getVrijednost);
+}
+
