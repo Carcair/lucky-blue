@@ -22,3 +22,11 @@ body {background: wheat;}
 #kombinacija, #zadnji-br {
     background: violet;
 }
+
+button {
+    background: tomato;
+    color: white;
+    border-radius: 25px;
+    font-size: 24px;
+    padding: 5px 12px;
+}

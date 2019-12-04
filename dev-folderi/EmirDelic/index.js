@@ -132,3 +132,7 @@ function ispisZadnjiBr(){
   var temp = "Zadnji broj u kombinaciji je: " + objekt.dobitnaKombinacija[zadnjiIndeks];
   document.getElementById("zadnji-br").innerHTML = temp;
 }
+
+function getValue(x){
+  console.log(x);
+}
