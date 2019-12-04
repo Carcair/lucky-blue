@@ -86,8 +86,8 @@ function traziDobitne(){
   P:[2,3,5,6,7] . Ovo je niz od 5 pogodjenih brojeva.
   }]*/
   
-    for(let j=0;j<objekt.userKombinacije.length;j++){
-        for(let i=0;i<7;i++){
+    for(let j = 0; j < objekt.userKombinacije.length; j++){
+        for(let i = 0; i < 7; i++){
             if(objekt.userKombinacije[j].komb.includes(objekt.dobitnaKombinacija[i])){
                 niz[j].NP++;
                 niz[j].P.push(objekt.dobitnaKombinacija[i])
@@ -122,8 +122,11 @@ function traziDobitne(){
 function getVrijednost(x){
     return objekt.dobitnaKombinacija(x)
 };
-/*
-for(let i=0; i < objekat.dobitnaKombinacija.length; i++){
-    console.log(getVrijednost);
+
+// 6. Skender
+
+function getZadnjiBr(niz){
+    var indeksZadnjegBr = niz.length - 1;
+    var zadnjiBr = niz[indeksZadnjegBr];
+    console.log(zadnjiBr);
 }
-*/
