@@ -5,3 +5,20 @@ body {background: wheat;}
 #get-tiket {
     background: cornflowerblue;
 }
+
+#get-result {
+    background: crimson;
+    color: white;
+}
+
+#get-ispis {
+    background: yellowgreen;
+}
+
+#get-zadnji-br {
+    background: tomato;
+}
+
+#kombinacija, #zadnji-br {
+    background: violet;
+}
