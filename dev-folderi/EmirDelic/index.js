@@ -136,3 +136,7 @@ function ispisZadnjiBr(){
 function getValue(x){
   console.log(x);
 }
+
+function getPomocniNiz(){
+  
+}

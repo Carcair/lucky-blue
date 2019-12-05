@@ -24,9 +24,11 @@ body {background: wheat;}
 }
 
 button {
-    background: tomato;
-    color: white;
-    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    background-image: url('./../Emrah/src/LampicaUkljucena.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 77px; width: 77px;
     font-size: 24px;
-    padding: 5px 12px;
 }
