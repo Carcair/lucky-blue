@@ -8,15 +8,15 @@ var objekt = {
 
 // 1. Dino
 // Generiše kombinaciju igre
-var getDobKomb = () => {
+function getDobKomb() {
   for(;;){
   //generisanje nasumicnog broja (takodjer se moze napraviti zasebna funkcija koja generise jedan broj, ali msm da nema potrebe)
     var genBr = Math.floor(Math.random() * 48 + 1);
     if(!objekt.dobitnaKombinacija.includes(genBr)){
-        objekt.dobitnaKombinacija.push(genBr);
+      objekt.dobitnaKombinacija.push(genBr);
     }
-    if(objekt.dobitnaKombinacija.length==7){
-        break;
+    if(objekt.dobitnaKombinacija.length == 7){
+      break;
     }
   }
 };
@@ -28,12 +28,13 @@ function getBroj(niz, rBroj, brTiketa){
   let broj = parseInt(prompt("Unesi " + (rBroj+1) + ". broj između 1 i 48. Tiket: " + brTiketa));
 
   // Provjeravamo da li broj postoji u nizu i da li je "broj" broj
-  if(niz.includes(broj) || isNaN(broj))
-      broj = getBroj(niz, rBroj, brTiketa);
-  
+  if(niz.includes(broj) || isNaN(broj)){
+    broj = getBroj(niz, rBroj, brTiketa);
+  }
   // Provjeravamo da li je broj od 1 do 48
-  if(broj < 1 || broj > 48)
-      broj = getBroj(niz, rBroj, brTiketa); 
+  if(broj < 1 || broj > 48){
+    broj = getBroj(niz, rBroj, brTiketa);
+  }
   return broj;
 }
 
@@ -149,7 +150,7 @@ function getPomNiz(){
 function animaus(){
   function test(){
     var temp = 1;
-    temp = Math.floor(Math.random() * 47 +1);
+    temp = Math.floor(Math.random() * 48 +1);
     document.getElementById("test").innerHTML = temp;
   }
   var roll = setInterval(test, 100);
@@ -170,3 +171,19 @@ function pokazi(){
     document.getElementById('chooseBr').style.display = "none";
   }
 }
+
+function ispis(){
+  console.log(1);
+}
+
+setTimeout(ispis, 5000);
+
+function posaljinesto(){
+  var temp = "";
+  for(let i = 0; i < 7; i++){
+    temp += "ja " + i + " <br/>";
+  }
+
+  document.getElementById("demo").innerHTML = temp;
+}
+posaljinesto();
