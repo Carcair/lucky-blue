@@ -30,6 +30,24 @@ body {background: wheat;}
     background: cadetblue;
 }
 
+#pokazi {
+    background: coral;
+    display: block;
+}
+
+#chooseBr {
+    background: darkgray;
+    display: none;
+}
+
+#esc {
+    background-image: none;
+    width: 40px; height: 40px;
+    display: block;
+    background: crimson;
+    border-radius: 50%;
+}
+
 button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -38,4 +56,5 @@ button {
     background-position: center;
     height: 77px; width: 77px;
     font-size: 24px;
+    cursor: pointer;
 }

@@ -22,8 +22,8 @@ export default {
 <style>
 body {
   margin: 0; padding: 0;
-  width: 100%; height: 100%;
-  min-height: 650px; min-width: 400px;
+  width: 100%;
+  min-height: 100vh; min-width: 400px;
   background: wheat;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;

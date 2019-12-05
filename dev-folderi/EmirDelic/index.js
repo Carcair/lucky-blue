@@ -158,3 +158,15 @@ function animaus(){
   }
   setTimeout(clearIt, 5000);
 }
+
+function pokazi(){
+  var x = document.getElementById('pokazi').style.display;
+  var y = document.getElementById('chooseBr').style.display;
+  if(x == "block"){
+    document.getElementById('pokazi').style.display = "none";
+    document.getElementById('chooseBr').style.display = "block";
+  }else{
+    document.getElementById('pokazi').style.display = "block";
+    document.getElementById('chooseBr').style.display = "none";
+  }
+}
