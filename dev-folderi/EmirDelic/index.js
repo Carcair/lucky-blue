@@ -137,6 +137,24 @@ function getValue(x){
   console.log(x);
 }
 
-function getPomocniNiz(){
-  
+function getPomNiz(){
+  let niz = []
+  for(let i = 1; i <= 48; i++)
+    niz.push(i);
+  return niz;
+}
+
+
+// Umjesto bubnja za početak
+function animaus(){
+  function test(){
+    var temp = 1;
+    temp = Math.floor(Math.random() * 47 +1);
+    document.getElementById("test").innerHTML = temp;
+  }
+  var roll = setInterval(test, 100);
+  function clearIt(){
+    clearInterval(roll);
+  }
+  setTimeout(clearIt, 5000);
 }

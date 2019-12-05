@@ -23,6 +23,13 @@ body {background: wheat;}
     background: violet;
 }
 
+#animate {
+    background: burlywood;
+}
+#test {
+    background: cadetblue;
+}
+
 button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
