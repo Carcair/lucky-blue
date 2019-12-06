@@ -24,6 +24,11 @@ export default {
 <style scoped>
   #game {
     box-sizing: border-box;
-    height: 85vh;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    background-color: aliceblue;
+    padding-bottom: 14vh;
   }
 </style>

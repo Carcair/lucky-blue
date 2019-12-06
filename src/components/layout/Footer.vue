@@ -14,10 +14,10 @@ export default {
     .footer {
         box-sizing: border-box;
         background: cornflowerblue;
-        position: absolute;
         height: 15vh; width: 100%;
         bottom: 0;
         text-align: center;
+        position: fixed;
     }
     .footer p {
         margin: 40px 0 0 0; padding: 0;
