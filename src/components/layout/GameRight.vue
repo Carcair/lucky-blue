@@ -12,8 +12,10 @@ export default {
 
 <style scoped>
     #right {
-        background-color: rgba(0, 128, 128, 0.5);
+        background: salmon;
         box-sizing: border-box;
-        width: 25vw;
+        width: 25vw; height: 100%;
+        right: 0;
+        position: absolute;
     }
 </style>

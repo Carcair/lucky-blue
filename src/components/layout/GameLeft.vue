@@ -1,8 +1,8 @@
 <template>
     <div id="left">
         <button id="get-tiket" v-if="!prekidac" v-on:click="changePrekidac()">Get Ticket</button>
-        <div v-if="prekidac" v-on:click="changePrekidac()">
-            <button id="esc">x</button>
+        <div v-if="prekidac">
+            <button id="esc" v-on:click="changePrekidac()">x</button>
             <br><br>
             <button class="btn" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
         </div>
@@ -18,6 +18,7 @@ export default {
             prekidac: false,
         }
     },
+    props: [],
     created() {
         for(let i = 1; i <= 48; i++){
             this.nizBr.push(i);
@@ -26,7 +27,8 @@ export default {
     methods: {
         changePrekidac() {
             this.prekidac = !this.prekidac;
-        }
+        },
+
     }
 }
 </script>
@@ -36,8 +38,10 @@ export default {
         background-color: rgba(0, 128, 128, 0.5);
         padding: 10px 15px;
         box-sizing: border-box;
-        width: 25vw;
+        min-width: 25vw; height: 100%;
         text-align: center;
+        position: absolute;
+        z-index: 1;
     }
 
     button {

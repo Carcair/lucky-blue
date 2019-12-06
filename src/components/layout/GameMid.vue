@@ -27,6 +27,8 @@ export default {
     #mid {
         background-color: rgba(216, 191, 216, 0.5);
         box-sizing: border-box;
-        width: 50vw;
+        width: 50vw; height: 100%;
+        position: absolute;
+        left: 25vw;
     }
 </style>

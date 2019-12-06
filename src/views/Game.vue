@@ -17,7 +17,18 @@ export default {
     GameLeft,
     GameRight,
     GameMid
-  }
+  },
+  data() {
+    return {
+      objekt : {
+        dobitnaKombinacija: [],
+        userKombinacije: [],
+        tiketi: 0,
+        najvisePogodaka: 0,
+        pogodci: [],
+      },
+    }
+  },
 }
 </script>
 

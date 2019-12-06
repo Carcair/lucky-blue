@@ -18,6 +18,7 @@ export default {
         bottom: 0;
         text-align: center;
         position: fixed;
+        z-index: 2;
     }
     .footer p {
         margin: 40px 0 0 0; padding: 0;
