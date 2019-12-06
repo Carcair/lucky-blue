@@ -1,5 +1,11 @@
 # Lucky-Blue
 
+Proces:
+    1. Generisati dobitnu kombinaciju igre (niz)
+    2. Tražiti unos kombinacije igrača (niz objekata (broj tiketa i kombinacija))
+    3. Provjera kombinacija igrača sa dobitnim kombinacijama
+    4. Ispis tiketa sa najvećim brojem pogodaka i njihovih kombinacija (moguće više tiketa)
+
 # Naš glavni objekat sa svim varijablama, podacima koje će sadržavati, vrijednosti su samo primjeri
 
 var objekt = {  
