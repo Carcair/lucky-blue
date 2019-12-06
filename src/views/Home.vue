@@ -1,12 +1,16 @@
 <template>
   <div class="home">
+    <Header />
     <router-link to="/game"><img src="../assets/LOGO.png" title="Lucky Blue"></router-link>
   </div>
 </template>
 
 <script>
+import Header from './../components/layout/Header.vue';
 export default {
-  
+  components: {
+    Header
+  }
 }
 </script>
 

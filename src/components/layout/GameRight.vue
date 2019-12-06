@@ -1,6 +1,6 @@
 <template>
-    <div>
-        game right
+    <div id="right">
+        
     </div>
 </template>
 
@@ -11,5 +11,9 @@ export default {
 </script>
 
 <style scoped>
-
+    #right {
+        background-color: rgba(0, 128, 128, 0.5);
+        box-sizing: border-box;
+        width: 25vw;
+    }
 </style>

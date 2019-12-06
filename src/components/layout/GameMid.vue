@@ -1,15 +1,32 @@
 <template>
-    <div>
-        Game Mid
+    <div id="mid">
+        <Bubanj />
+        <Counter />
     </div>
 </template>
 
 <script>
+import Counter from './../Counter.vue';
+import Bubanj from './../Bubanj.vue';
+
 export default {
-    name: 'GameMid'
+    name: 'GameMid',
+    components: {
+        Counter,
+        Bubanj
+    },
+    data() {
+        return {
+
+        }
+    }
 }
 </script>
 
 <style scoped>
-
+    #mid {
+        background-color: rgba(216, 191, 216, 0.5);
+        box-sizing: border-box;
+        width: 50vw;
+    }
 </style>
