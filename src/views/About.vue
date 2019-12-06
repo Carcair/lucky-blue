@@ -1,5 +1,6 @@
 <template>
     <div class="about">
+        <Header />
         <p>
             <span>Lucky Blue game</span><br><br>
             <span>Developed by:</span><br>
@@ -14,6 +15,15 @@
         </p>
     </div>
 </template>
+
+<script>
+import Header from './../components/layout/Header.vue';
+export default {
+    components: {
+        Header
+    }
+}
+</script>
 
 <style scoped>
     .about p{

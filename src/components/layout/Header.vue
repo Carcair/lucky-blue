@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
     .header {
-        height: 100px; width: 100%;
+        height: 15vh; width: 100%;
         background: cornflowerblue;
         margin: 0;
         padding: 25px 0 0 15px;

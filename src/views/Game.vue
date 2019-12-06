@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="game">
     <game-left />
     <game-mid />
     <game-right />
@@ -22,5 +22,8 @@ export default {
 </script>
 
 <style scoped>
-
+  #game {
+    box-sizing: border-box;
+    height: 85vh;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        Game Mid
+    <div id="mid">
+        
     </div>
 </template>
 
@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style scoped>
-
+    #mid {
+        display: inline-block;
+        height: 100%; width: 48vw;
+        background-color: rgba(216, 191, 216, 0.5);
+        box-sizing: border-box;
+    }
 </style>
