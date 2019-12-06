@@ -37,6 +37,7 @@ export default {
         padding: 10px 15px;
         box-sizing: border-box;
         width: 25vw;
+        text-align: center;
     }
 
     button {
@@ -67,7 +68,8 @@ export default {
         font-size: 24px;
         border: none;
         border-radius: 25px;
-        float: right;
+        width: 150px;
+        margin-top: 50%;
     }
 
     #esc:hover, .btn:hover, #get-tiket:hover {

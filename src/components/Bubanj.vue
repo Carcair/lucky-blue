@@ -1,18 +1,34 @@
 <template>
     <div id="bubanj">
-        <p id="broj">48</p>
+        <p id="broj">{{zadnjiBr}}</p>
     </div>
 </template>
 
 <script>
+
 export default {
-    name: 'Bubanj'
+    name: 'Bubanj',
+    data() {
+        return {
+            zadnjiBr: 0,
+        }
+    },
+    created() {
+        var self = this;
+        var roll = setInterval(function(){
+            self.zadnjiBr = Math.floor(Math.random() * 47 + 1);
+        }, 100);
+
+        setTimeout(function(){
+            clearInterval(roll);
+        }, 5000);
+    }
 }
 </script>
 
 <style scoped>
     div {
-        background-color: aqua;
+        background: tomato;
         height: 300px; width: 300px;
         border-radius: 50%;
         margin: 10% auto 0 auto;
