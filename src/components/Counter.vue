@@ -15,7 +15,7 @@ export default {
     created() {
         var self = this;
         self.brojac = "02 : 00";
-        var minuta = 1;
+        var minuta = 2;
         var sekunda = 0;
         
         var sekCount = setInterval(function(){
