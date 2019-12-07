@@ -7,15 +7,15 @@
 <script>
 export default {
     name: 'counter',
-    data() {
+    data: function() {
         return {
             brojac: "",
         }
     },
-    created() {
+    created: function() {
         var self = this;
         self.brojac = "02 : 00";
-        var minuta = 2;
+        var minuta = 1;
         var sekunda = 0;
         
         var sekCount = setInterval(function(){

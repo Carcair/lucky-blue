@@ -1,33 +1,63 @@
 <template>
     <div id="left">
-        <button id="get-tiket" v-if="!prekidac" v-on:click="changePrekidac()">Get Ticket</button>
-        <div v-if="prekidac">
-            <button id="esc" v-on:click="changePrekidac()">x</button>
-            <br><br>
-            <button class="btn" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
+        <div v-if="!kraj">
+            <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
+            <div  v-else>
+                <button id="esc" v-on:click="changePrekidac()">x</button>
+                <br><br>
+                <button class="btn" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
+                <hr>
+                <button class="btn-izabrani" v-bind:key="'korisnik' + brojKomb" v-for="brojKomb in komb" disabled>{{brojKomb}}</button>
+            </div>
         </div>
+        <p>Broj tiketa: {{tiketi-1}}</p>
     </div>
 </template>
 
 <script>
 export default {
     name: 'gameLeft',
-    data() {
+    data: function() {
         return {
             nizBr: [],
-            prekidac: false,
+            komb: [],
+            tiketi: 1,
+            prekidac: true,
+            kraj: false,
         }
     },
     props: [],
-    created() {
+    created: function() {
+        var self = this;
         for(let i = 1; i <= 48; i++){
-            this.nizBr.push(i);
+            self.nizBr.push(i);
         }
+        setTimeout(function() {
+            self.kraj = true;
+        }, 60000);
     },
     methods: {
-        changePrekidac() {
+        changePrekidac: function(){
+            if(this.prekidac == false){
+                this.komb = [];
+            }
             this.prekidac = !this.prekidac;
         },
+        getBroj: function(x){
+            if(!this.komb.includes(x)){
+                this.komb.push(x);
+                var newKomb = {
+                    brTiketa: this.tiketi,
+                    komb: this.komb,
+                };
+                if(this.komb.length == 7){
+                    this.komb = [];
+                    this.tiketi++;
+                    this.$emit('add-komb', newKomb);
+                    this.prekidac = !this.prekidac;
+                }
+            }
+        }
 
     }
 }
@@ -79,5 +109,16 @@ export default {
     #esc:hover, .btn:hover, #get-tiket:hover {
         background: bisque;
         color:black;
+    }
+
+    .btn-izabrani {
+        border: none;
+        box-sizing: border-box;
+        background-image: radial-gradient(white, blue);
+        color: black;
+        border: 2px solid white;
+        height: 40px; width: 40px;
+        margin: 5px;
+        border-radius: 50%;
     }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="game">
-    <game-left />
-    <game-mid />
-    <game-right />
+    <GameLeft v-on:add-komb="addKomb" />
+    <GameMid />
+    <GameRight />
   </div>
 </template>
 
@@ -12,13 +12,13 @@ import GameMid from './../components/layout/GameMid.vue'
 import GameRight from './../components/layout/GameRight.vue';
 
 export default {
-  name: 'game',
+  name: 'Game',
   components: {
     GameLeft,
     GameRight,
     GameMid
   },
-  data() {
+  data: function() {
     return {
       objekt : {
         dobitnaKombinacija: [],
@@ -29,6 +29,11 @@ export default {
       },
     }
   },
+  methods: {
+    addKomb: function(newKomb) {
+      this.objekt.userKombinacije.push(newKomb);
+    },
+  }
 }
 </script>
 

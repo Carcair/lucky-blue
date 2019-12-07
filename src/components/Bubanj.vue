@@ -8,14 +8,14 @@
 
 export default {
     name: 'bubanj',
-    data() {
+    data: function() {
         return {
             zadnjiBr: "",
         }
     },
-    created() {},
+    created: function() {},
     methods: {
-        startRoll() {
+        startRoll: function() {
             var self = this;
             var roll = setInterval(function(){
                 self.zadnjiBr = Math.floor(Math.random() * 47 + 1);

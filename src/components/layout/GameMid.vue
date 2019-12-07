@@ -15,11 +15,6 @@ export default {
         Counter,
         Bubanj
     },
-    data() {
-        return {
-
-        }
-    }
 }
 </script>
 
