@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'Counter',
+    name: 'counter',
     data() {
         return {
             brojac: "",

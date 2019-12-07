@@ -10,7 +10,7 @@ import Counter from './../Counter.vue';
 import Bubanj from './../Bubanj.vue';
 
 export default {
-    name: 'GameMid',
+    name: 'gameMid',
     components: {
         Counter,
         Bubanj

@@ -7,7 +7,7 @@
 <script>
 
 export default {
-    name: 'Bubanj',
+    name: 'bubanj',
     data() {
         return {
             zadnjiBr: "",

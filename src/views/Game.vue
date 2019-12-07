@@ -12,7 +12,7 @@ import GameMid from './../components/layout/GameMid.vue'
 import GameRight from './../components/layout/GameRight.vue';
 
 export default {
-  name: 'Game',
+  name: 'game',
   components: {
     GameLeft,
     GameRight,

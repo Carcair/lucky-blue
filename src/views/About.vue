@@ -19,6 +19,7 @@
 <script>
 import Header from './../components/layout/Header.vue';
 export default {
+    name: 'about',
     components: {
         Header
     }
