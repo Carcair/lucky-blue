@@ -1,7 +1,7 @@
 <template>
   <div id="game">
     <GameLeft v-on:add-komb="addKomb" />
-    <GameMid />
+    <GameMid v-on:add-broj="addBroj" />
     <GameRight />
   </div>
 </template>
@@ -33,6 +33,9 @@ export default {
     addKomb: function(newKomb) {
       this.objekt.userKombinacije.push(newKomb);
     },
+    addBroj: function(broj) {
+      this.objekt.dobitnaKombinacija.push(broj);
+    }
   }
 }
 </script>

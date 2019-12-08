@@ -1,6 +1,6 @@
 <template>
     <div id="mid">
-        <Bubanj />
+        <Bubanj v-on:add-broj-bubanj="addBrojBubanj" />
         <Counter />
     </div>
 </template>
@@ -15,6 +15,17 @@ export default {
         Counter,
         Bubanj
     },
+    data: function(){
+        return {
+            zadnjiBr: ""
+        }
+    },
+    methods: {
+        addBrojBubanj: function(zadnjiBr){
+            this.zadnjiBr = zadnjiBr;
+            this.$emit('add-broj', zadnjiBr);
+        }
+    }
 }
 </script>
 

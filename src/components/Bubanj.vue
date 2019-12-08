@@ -1,5 +1,5 @@
 <template>
-    <div id="bubanj" v-on:click='startRoll'>
+    <div id="bubanj">
         <p id="broj">{{zadnjiBr}}</p>
     </div>
 </template>
@@ -13,19 +13,26 @@ export default {
             zadnjiBr: "",
         }
     },
-    created: function() {},
-    methods: {
-        startRoll: function() {
-            var self = this;
-            var roll = setInterval(function(){
-                self.zadnjiBr = Math.floor(Math.random() * 47 + 1);
-            }, 100);
-
+    created: function() {
+        var self = this;
+        var niz = [];
+        for(let i = 0; i < 7; i++){
             setTimeout(function(){
-                clearInterval(roll);
-            }, 7000);
+                var roll = setInterval(function(){
+                    var temp = Math.floor(Math.random() * 47 + 1);
+                    
+                    niz.push(temp);
+                    self.zadnjiBr = temp;
+                }, 100);
+
+                setTimeout(function(){
+                    clearInterval(roll);
+                    self.$emit("add-broj-bubanj", self.zadnjiBr);
+                }, 5000);
+            }, 63000 + (i*7000));
         }
-    }
+    },
+    methods: {}
 }
 </script>
 
