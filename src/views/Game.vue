@@ -2,7 +2,7 @@
   <div id="game">
     <GameLeft v-on:add-komb="addKomb" />
     <GameMid v-on:add-broj="addBroj" />
-    <GameRight />
+    <GameRight v-bind:objekt="objekt" />
   </div>
 </template>
 
