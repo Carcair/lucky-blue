@@ -16,17 +16,21 @@ export default {
     created: function() {
         var self = this;
         var niz = [];
+        var k = 47;
+        for(let j = 1; j <= 48; j++){
+            niz.push(j);
+        }
         for(let i = 0; i < 7; i++){
             setTimeout(function(){
                 var roll = setInterval(function(){
-                    var temp = Math.floor(Math.random() * 47 + 1);
-                    
-                    niz.push(temp);
-                    self.zadnjiBr = temp;
-                }, 100);
+                    var temp = Math.floor(Math.random() * k + 1);
+                    self.zadnjiBr = niz[temp];
+                }, 200);
 
                 setTimeout(function(){
                     clearInterval(roll);
+                    niz.splice(niz.indexOf(self.zadnjiBr), 1);
+                    k--;
                     self.$emit("add-broj-bubanj", self.zadnjiBr);
                 }, 5000);
             }, 63000 + (i*7000));
