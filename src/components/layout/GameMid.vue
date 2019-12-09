@@ -17,12 +17,14 @@ export default {
     },
     data: function(){
         return {
-            zadnjiBr: ""
+            zadnjiBr: "",
+            brojac: 0
         }
     },
     methods: {
         addBrojBubanj: function(zadnjiBr){
             this.zadnjiBr = zadnjiBr;
+            this.brojac++;
             this.$emit('add-broj', zadnjiBr);
         }
     }

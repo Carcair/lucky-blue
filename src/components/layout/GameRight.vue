@@ -1,13 +1,13 @@
 <template>
     <div id="right">
-        <button class="broj" v-bind:key="broj" v-for="broj in objekt.dobitnaKombinacija">{{broj}}</button>
+        <button class="broj" v-bind:key="broj" v-for="broj in dobitnaKombinacija">{{broj}}</button>
     </div>
 </template>
 
 <script>
 export default {
     name: 'gameRight',
-    props: ['objekt'],
+    props: ['dobitnaKombinacija'],
 }
 </script>
 
@@ -23,9 +23,12 @@ export default {
     }
 
     .broj {
-        background: radial-gradient(white, blue);
+        border: none;
+        box-sizing: border-box;
+        background-image: radial-gradient(white, blue);
         border: 2px solid white;
-        margin: 15px; padding: 10px;
+        height: 40px; width: 40px;
+        margin: 5px;
         border-radius: 50%;
     }
 </style>
