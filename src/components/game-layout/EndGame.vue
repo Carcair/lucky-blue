@@ -1,6 +1,7 @@
 <template>
     <div id="end-game">
         <Header />
+
         <div id="komb">
             <p>Kombinacija igre je:</p>
             <button class="brojD" v-bind:key="'B' + broj" v-for="broj in dobitnaKombinacija">{{broj}}</button>
@@ -27,6 +28,8 @@ export default {
     components: {
         Header
     },
+    // prvi korak kod propova, inicijaliziramo im imena ovdje
+    // onda ih u parent elementu koristimo kao atribute html tagova
     props: ['niz', 'najvisePogodaka', 'dobitnaKombinacija']
 }
 </script>

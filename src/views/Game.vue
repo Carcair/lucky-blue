@@ -1,6 +1,8 @@
 <template>
   <div id="game">
+    <!-- bindamo vrijednosti koje želimo poslati u child komponentu za odgovarajući prop -->
     <EndGame v-if="prekidac" v-bind:niz="pogodci" v-bind:najvisePogodaka="najvisePogodaka" v-bind:dobitnaKombinacija="dobitnaKombinacija" />
+
     <div v-else>
 
       <!-- Funkcija addKomb će se pokrenuti sa eventom add-komb pokrenut u GameLeft.vue iz uzet će vrijednost proslijeđenu u njemi -->

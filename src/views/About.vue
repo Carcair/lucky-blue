@@ -12,6 +12,7 @@
             <br>Semra Smajlagić
             <br>Emir Obralić
             <br>Skender Međić
+            <br>Emir Delić
         </p>
     </div>
 </template>
