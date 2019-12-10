@@ -1,6 +1,6 @@
 <template>
   <div id="game">
-    <EndGame v-if="prekidac" v-bind:niz="pogodci" />
+    <EndGame v-if="prekidac" v-bind:niz="pogodci" v-bind:najvisePogodaka="najvisePogodaka" v-bind:dobitnaKombinacija="dobitnaKombinacija" />
     <div v-else>
 
       <!-- Funkcija addKomb će se pokrenuti sa eventom add-komb pokrenut u GameLeft.vue iz uzet će vrijednost proslijeđenu u njemi -->
@@ -65,34 +65,35 @@ export default {
 
     // Tražimo pogođene brojeve
     getRezultat: function() {
-      var niz = []; // Privremeni niz koji će sadržavati svaki tiket sa njihovim brojem pogođenih brojeva
+      var niz = []; // Privremeni niz koji će sadržavati broj pogođenih brojeva za svaki tiket, respektivno po indeksu
       var max = 0; // Najviše pogodaka
       var self = this;
       var korNiz = this.userKombinacije;
       var dobNiz = this.dobitnaKombinacija;
 
+      // Dodjeljujemo početne vrijednosti za 0 pogodaka, koje ćemo povećavati pri provjeri
       korNiz.forEach(function(){
-        let temp = {};
-        temp.brojPog = 0;
-        temp.komb = [];
-        niz.push(temp);
+        niz.push(0);
       });
 
-      korNiz.forEach(function(obj, i){
+      // Za svaku korisničku kombinaciju provjeravat ćemo da li ima jednu od vrijednosti iz dobitne kombinacije
+      // Ukoliko ima povećavamo broj pogodaka u pomoćnom nizu broja sa indeksom tiketa kojeg provjeravamo
+      korNiz.forEach(function(obj, indeks){
         dobNiz.forEach(function(broj){
           if(obj.komb.includes(broj)){
-            niz[i].brojPog++;
-            niz[i].komb.push(broj);
+            niz[indeks]++;
           }
         });
-        if(niz[i].brojPog > max)
-          max = niz[i].brojPog;
+        if(niz[indeks] > max)
+          max = niz[indeks];
       });
-      
+
       this.najvisePogodaka = max;
 
-      niz.forEach(function(obj, indeks){
-        if(obj.brojPog === max){
+      // Uzimamo indeks iz pomoćnog niza svakog broja koji odgovara maksimalnom broju pogodaka
+      // I šaljemo nizu objekata koji se sastoji iz dobitnih tiketa
+      niz.forEach(function(broj, indeks){
+        if(broj === max){
           self.pogodci.push(self.userKombinacije[indeks]);
         }
       });
