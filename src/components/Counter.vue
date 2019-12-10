@@ -35,6 +35,18 @@ export default {
                 clearInterval(sekCount);
             }
         }, 1000);
+        for(let i = 0; i < 7; i++){
+            setTimeout(function(){
+                sekunda = 5;
+                var roundCount = setInterval(function(){
+                    self.brojac = sekunda
+                    sekunda--;
+                    if(sekunda == -1){
+                        clearInterval(roundCount);
+                    }
+                }, 1000);
+            }, 62000 + (i*7000));
+        }
     },
 }
 </script>

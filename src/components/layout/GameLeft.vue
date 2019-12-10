@@ -36,6 +36,7 @@ export default {
         setTimeout(function() {
             self.kraj = false;
         }, 60000);
+        
     },
     methods: {
         changePrekidac: function(){
