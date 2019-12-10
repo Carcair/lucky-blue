@@ -1,6 +1,6 @@
 <template>
     <div id="left">
-        <div v-if="!kraj">
+        <div v-if="kraj">
             <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
             <div  v-else>
                 <button id="esc" v-on:click="changePrekidac()">x</button>
@@ -10,6 +10,7 @@
                 <button class="btn-izabrani" v-bind:key="'korisnik' + brojKomb" v-for="brojKomb in komb" disabled>{{brojKomb}}</button>
             </div>
         </div>
+        <p v-else-if="!kraj">Ne možete više birati tikete</p>
         <p>Broj tiketa: {{tiketi-1}}</p>
     </div>
 </template>
@@ -23,7 +24,7 @@ export default {
             komb: [],
             tiketi: 1,
             prekidac: true,
-            kraj: false,
+            kraj: true,
         }
     },
     props: [],
@@ -33,7 +34,7 @@ export default {
             self.nizBr.push(i);
         }
         setTimeout(function() {
-            self.kraj = true;
+            self.kraj = false;
         }, 60000);
         
     },
