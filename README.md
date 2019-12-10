@@ -1,109 +1,12 @@
 # Lucky-Blue
 
-Proces:
-    1. Generisati dobitnu kombinaciju igre (niz)
-    2. Tražiti unos kombinacije igrača (niz objekata (broj tiketa i kombinacija))
-    3. Provjera kombinacija igrača sa dobitnim kombinacijama
-    4. Ispis tiketa sa najvećim brojem pogodaka i njihovih kombinacija (moguće više tiketa)
+Gambling app.
 
-# Naš glavni objekat sa svim varijablama, podacima koje će sadržavati, vrijednosti su samo primjeri
+At the start of the game, we will have 2 minute counter. During that counter we can get tickets and choose our own 7 numbers. After the counter there'll be 5 second counter during which server will generate it's own combination.
+After 7 rounds there'll be intermission after which we'll be sent to last window where we'll be shown tickets with most correct numbers (one or more tickets).
 
-var objekt = {  
-    dobitnaKombinacija: [1, 2, 3, 4, 5, 6, 7],  
-    userKombinacije: [  
-        {brojTiketa:1,komb:[1,2,3,4,5,6,7]},   
-        {...},  
-        {...},  
-        ...,  
-    ],  
-    tiketi: [1, 2, 3, 4, 5, 6, ...],  
-    dobitnici: [  
-        {brojTiketa:1,komb:[1,2,3,4,5,6,7]},  
-        {...},  
-        {...},  
-        ...,  
-    ],  
-    najvišePogodaka: 0,  
-    pogodci: [],  
-}  
-
-Zadatak ove aplikacije je slijedeći:  
-    1. Generisati kombinaciju od 7 nasumičnih brojeva između 1 i 48  
-        a. brojevi ne smiju biti isti  
-        b. oni će biti smješteni u nizu objekt.dobitnaKombinacija  
-        c. funkcija treba generisati svaki broj pojedinačno i odmah vršiti provjeru da li taj broj već postoji  
-
-        getDobKomb = function(){}
-    
-    2. Funkcija pomoću koje će korisnik birati 7 brojeva između 1 i 48
-        a. brojevi ne smiju biti isti
-        b. bit će u obliku objekta {brojTiketa: #, komb:[brojevi]}
-        c. mora biti dodjeljen svoj unikatni brojTiketa (za sad uraditi za samo jedan ticket), inkrementacija
-        d. trenutno možemo koristiti parseint(prompt()) za unos brojeva
-
-        getUserKomb = function(){}
-
-    3. Funkcija koja će istovremeno dodati korisničku kombinaciju i broj tiketa u niz objekt.userKombinacije i brojTiketa u objekt.tiketi
-        a. za početak koristiti objekat {brojTiketa: #, komb: [brojevi]} sa vašim vrijednostima
-        b. uradite funkciju i pozovite je za 2-3 različita objekta kojima ste sami vrijednosti zadali
-        c. nakon što se uradi zadatak 2. onda ćemo ih spojiti
-
-        getUserKombs = function(){}
-    
-    4. Funkcija koja će tražiti dobitne kombinacije
-        a. napraviti jednu korisničku kombinaciju u formatu kao u objekat.userKombinacije
-        b. napraviti jednu kombinaciju formata objekat.dobitnaKombinacija
-        c. uzimati vrijednosti iz dobitne kombinacije i tražiti ih u korisničkim kombinacijama
-        d. u varijablu najvišePogodaka upisati koliko je bilo pogođenih brojeva
-        e. u niz pogodci ubaciti pogođene brojeve
-
-        getPobjednik = function(){}
-
-    5. Funkcija koja će vraćati brojeve dobitne kombinacije
-        a. uzima vrijednosti iz niza kao u formatu objekt.dobitnaKombinacija
-        b. funkcija izbacuje svaki broj pojedinačno, znači pravimo je da vraća jedan broj
-
-        getIspisKomb = function(){}
-
-    6. Funkcija koja će vraćati samo zadnji broj iz kombinacije
-
-        getZadnjiBr = function(){}
-
-    7. Objekat koji sadržavati samo funkcije/metode, nazvat ćemo ga getters
-        a. funkcije će biti prazne, odn. function(){}
-        b. za imena metoda pogledati ostale zadatke
-
-
-# Dino Šahman
-Zadatak br. 1.
-
-# Haris Mahmutagić
-Zadatak br. 4.
-
-# Mirza Bibić
-HTML + CSS
-
-# Amar Mujkanović
-Zadatak br. 5.
-
-# Emrah Hadžišehić
-Dizajn
-
-# Semra Smajlagić
-Zadatak br. 2.
-
-# Emir Obralić
-Zadatak br. 3.
-
-# Skender Međić
-Zadatak br. 6. i 7.
-
-
-
-
-
-
-# lucky-blue
+Application is simple. We used Vue, Vue.router and JS, with some HTML+CSS for looks.
+Avoided using Vuex so we could show usage of $emit and props.
 
 ## Project setup
 ```

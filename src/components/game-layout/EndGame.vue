@@ -1,6 +1,7 @@
 <template>
     <div id="end-game">
-        <div class="dobitak" v-bind:key="tiket" v-for="tiket in niz">
+        <div id="nope" v-if="!niz.length">Nema dobitaka!!!</div>
+        <div class="dobitak" v-bind:key="tiket.brTiketa" v-for="tiket in niz">
             <p>Broj tiketa: {{tiket.brTiketa}}</p>
             <button class="broj" v-bind:key="'A'+broj" v-for="broj in tiket.komb">{{broj}}</button>
             <hr>
@@ -17,9 +18,13 @@ export default {
 </script>
 
 <style scoped>
-    #end-game {
-        background: tomato;
+    #nope {
+        width: 100vw;
+        line-height: 100px;
+        text-align: center;
+        font-size: 48px;
     }
+    
     .broj {
         border: none;
         box-sizing: border-box;

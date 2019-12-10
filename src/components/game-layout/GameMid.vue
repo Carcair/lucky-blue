@@ -1,5 +1,11 @@
 <template>
     <div id="mid">
+
+        <!-- 
+            Pozivamo se na event koji smo kreirali, isto kao što bi na klikanje se pozvali
+            znači v-on:click="" a u našem slučaju v-on:add-broj-bubanj=""
+            sa pozivanjem tog eventa pokrenut će se funkcija addBrojBubanj
+         -->
         <Bubanj v-on:add-broj-bubanj="addBrojBubanj" />
         <Counter />
     </div>
@@ -15,16 +21,13 @@ export default {
         Counter,
         Bubanj
     },
-    data: function(){
-        return {
-            zadnjiBr: "",
-            brojac: 0
-        }
-    },
     methods: {
+
+        // Sa obzirom da se sve naše varijable nalaze u komponenti Game.vue, morat ćemo još jednom
+        // emitovati vrijednosti u slijedeću parent komponentu (odn. iz GameMid.vue u Game.vue)
+        // funkcija addBrojBubanj će uzeti varijablu prosljeđenu sa $emit iz child komponente Bubanj
+        
         addBrojBubanj: function(zadnjiBr){
-            this.zadnjiBr = zadnjiBr;
-            this.brojac++;
             this.$emit('add-broj', zadnjiBr);
         }
     }
