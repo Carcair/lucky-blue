@@ -8,6 +8,8 @@ After 7 rounds there'll be intermission after which we'll be sent to last window
 Application is simple. We used Vue, Vue.router and JS, with some HTML+CSS for frontend.
 Avoided using Vuex so we could show usage of $emit and props.
 
+Also found on: https://lucky-blue.netlify.com
+
 ## Project setup
 ```
 npm install
