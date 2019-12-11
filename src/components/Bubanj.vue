@@ -1,6 +1,6 @@
 <template>
-    <div id="bubanj">
-        <p id="broj">{{zadnjiBr}}</p>
+    <div>
+        <p id="bubanj">{{zadnjiBr}}</p>
     </div>
 </template>
 
@@ -65,15 +65,10 @@ export default {
 
 <style scoped>
     div {
-        background: tomato;
-        height: 300px; width: 300px;
-        border-radius: 50%;
-        margin: 10% auto 0 auto;
+        width: 100%;
         text-align: center;
-        border: 2px dotted black;
-        line-height: 200px;
-    }
-    #broj {
-        font-size: 52px;
+        font-size: 32px;
+        position: absolute;
+        top: 30%;
     }
 </style>

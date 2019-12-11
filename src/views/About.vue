@@ -31,10 +31,14 @@ export default {
     .about p{
         width: 350px;
         display: block;
-        margin: 25px auto;
-        background: rgba(64, 56, 134, 0.5);
+        margin: 0 auto;
         text-align: center;
         padding: 10px;
         line-height: 25px;
+        background-color: rgba(169, 169, 169, 0.5);
+        border-radius: 10px;
+    }
+    .about span{
+        font-size: 32px;
     }
 </style>

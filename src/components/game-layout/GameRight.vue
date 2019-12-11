@@ -13,7 +13,7 @@ export default {
 
 <style scoped>
     #right {
-        background: salmon;
+        background-color: rgba(169, 169, 169, 0.1);
         box-sizing: border-box;
         width: 25vw; height: 100%;
         right: 0;

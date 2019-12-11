@@ -111,7 +111,6 @@ export default {
     display: flex;
     flex-wrap: nowrap;
     min-height: 100vh;
-    background-color: aliceblue;
     padding-bottom: 14vh;
   }
 </style>

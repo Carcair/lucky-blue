@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <Header />
-    <router-link to="/game"><img src="../assets/LOGO.png" title="Lucky Blue"></router-link>
+    <router-link to="/game"><img id="logo" src="../assets/LOGO.png" title="Play Lucky Blue"></router-link>
+    <router-link to="/game"><img class="btn" src="../assets/PlayOrange.png" title="Play Lucky Blue"></router-link>
+    <router-link to="/how-to"><img class="btn" src="../assets/HelpOrange.png" title="How to"></router-link>
   </div>
 </template>
 
@@ -16,9 +18,15 @@ export default {
 </script>
 
 <style scoped>
-  .home img {
-    height: 200px;
+  #logo {
+    height: 35vh;
     display: block;
-    margin: 10% auto;
+    margin: 2% auto;
+  }
+
+  .btn {
+    display: block;
+    height: 50px;
+    margin: 2% auto; 
   }
 </style>

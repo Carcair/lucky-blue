@@ -14,20 +14,19 @@ export default {
 
 <style scoped>
     .header {
+        background-color: rgba(255, 165, 0, 0.5);
         height: 15vh; width: 100%;
-        background: cornflowerblue;
         margin: 0;
         padding: 25px 0 0 15px;
         box-sizing: border-box;
-        border: 1px solid black;
     }
 
     .header button {
         margin: 0 15px 0 0;
         padding: 15px;
         float: right;
-        border: 1px solid black;
-        background: gray;
+        border: none; border-radius: 15%;
+        background-color: rgb(230, 154, 13);
     }
 
     .header button:hover {

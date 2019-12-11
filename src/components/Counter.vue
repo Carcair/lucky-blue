@@ -76,8 +76,8 @@ export default {
     div {
         width: 100%;
         text-align: center;
-        background: wheat;
-        margin-top: 50px;
         font-size: 32px;
+        position: absolute;
+        bottom: 30%;
     }
 </style>

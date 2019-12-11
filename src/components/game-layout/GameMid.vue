@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
     #mid {
-        background-color: rgba(216, 191, 216, 0.5);
+        background-color: rgba(169, 169, 169, 0.1);
         box-sizing: border-box;
         width: 50vw; height: 100%;
         position: absolute;

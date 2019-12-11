@@ -101,7 +101,7 @@ export default {
 
 <style scoped>
     #left {
-        background-color: rgba(0, 128, 128, 0.5);
+        background-color: rgba(169, 169, 169, 0.1);
         padding: 10px 15px;
         box-sizing: border-box;
         min-width: 25vw; height: 100%;
@@ -139,7 +139,7 @@ export default {
         border: none;
         border-radius: 25px;
         width: 150px;
-        margin-top: 50%;
+        margin-top: 20%;
     }
 
     #esc:hover, .btn:hover, #get-tiket:hover {
