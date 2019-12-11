@@ -13,7 +13,6 @@ export default {
 <style scoped>
     .footer {
         box-sizing: border-box;
-        background-color: rgba(255, 165, 0, 0.5);
         height: 15vh; width: 100%;
         bottom: 0;
         text-align: center;
