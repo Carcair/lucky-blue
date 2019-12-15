@@ -33,7 +33,7 @@ body {
     background-image: url("./assets/PodlogaP.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 100vw 100vh;
   }
 }
 </style>
