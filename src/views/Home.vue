@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
   #logo {
-    height: 35vh;
+    width: 45vw;
     display: block;
     margin: 2% auto;
   }
@@ -28,5 +28,11 @@ export default {
     display: block;
     height: 50px;
     margin: 2% auto; 
+  }
+
+  @media only screen and (max-width: 600px){
+    #logo {
+      width: 90vw;
+    }
   }
 </style>

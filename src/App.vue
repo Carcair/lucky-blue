@@ -25,8 +25,17 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 40%, center;
   background-size: 60vh, 100% 100%;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   position: relative;
+}
+@media only screen and (max-width: 600px){
+  body {
+    background-image: url("./assets/PodlogaP.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 </style>

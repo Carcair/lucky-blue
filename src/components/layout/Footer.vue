@@ -18,6 +18,7 @@ export default {
         text-align: center;
         position: fixed;
         z-index: 2;
+        background-color: rgba(169, 169, 169, 0.4);
     }
     .footer p {
         margin: 40px 0 0 0; padding: 0;

@@ -5,7 +5,7 @@
         <div v-if="kraj">
 
             <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
-            <div  v-else>
+            <div  v-else id="tiket">
                 <button id="esc" v-on:click="changePrekidac()">x</button>
                 <br><br>
 
@@ -108,6 +108,11 @@ export default {
         text-align: center;
         position: absolute;
         z-index: 1;
+    }
+
+    #tiket {
+        background-color: rgba(169, 169, 169, 0.4);
+        padding: 10px;
     }
 
     button {

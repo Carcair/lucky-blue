@@ -18,6 +18,7 @@ export default {
         margin: 0;
         padding: 25px 0 0 15px;
         box-sizing: border-box;
+        background-color: rgba(169, 169, 169, 0.4);
     }
 
     .header button {
