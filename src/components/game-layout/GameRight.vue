@@ -34,9 +34,8 @@ export default {
 
     @media only screen and (max-width: 600px){
         #right {
-            display: block;
-            width: 100%;
-            left: 0;
+            width: 20%; margin: 0; padding-top: 40px;
+            background: none;
         }
     }
 </style>
