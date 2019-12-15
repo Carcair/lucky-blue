@@ -19,8 +19,6 @@ export default {
 <style>
 body {
   margin: 0; padding: 0;
-  width: 100%;
-  min-height: 100vh; min-width: 400px;
   background-image: url("./assets/Bubanj.png"), url("./assets/PodlogaL.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 40%, center;
@@ -35,7 +33,7 @@ body {
     background-image: url("./assets/PodlogaP.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
 </style>
