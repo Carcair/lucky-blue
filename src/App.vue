@@ -34,6 +34,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100vw 100vh;
+    background-attachment: fixed;
   }
 }
 </style>
