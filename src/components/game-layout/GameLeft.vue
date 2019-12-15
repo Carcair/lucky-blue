@@ -172,5 +172,6 @@ export default {
         #get-tiket {
             margin-top: 0;
         }
+        .btn {width: 10vw; height: 10vw;}
     }
 </style>
