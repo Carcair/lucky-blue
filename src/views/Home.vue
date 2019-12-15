@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
   #logo {
-    width: 45vw;
+    width: 65vh;
     display: block;
     margin: 2% auto;
   }
