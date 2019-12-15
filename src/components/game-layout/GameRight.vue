@@ -31,4 +31,12 @@ export default {
         margin: 5px;
         border-radius: 50%;
     }
+
+    @media only screen and (max-width: 600px){
+        #right {
+            display: block;
+            width: 100%;
+            left: 0;
+        }
+    }
 </style>

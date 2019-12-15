@@ -42,4 +42,11 @@ export default {
         position: absolute;
         left: 25vw;
     }
+    @media only screen and (max-width: 600px){
+        #mid {
+            display: block;
+            width: 100%;
+            left: 0;
+        }
+    }
 </style>

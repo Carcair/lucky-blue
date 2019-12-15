@@ -162,4 +162,15 @@ export default {
         margin: 5px;
         border-radius: 50%;
     }
+
+    @media only screen and (max-width: 600px){
+        #left {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+        #get-tiket {
+            margin-top: 0;
+        }
+    }
 </style>
