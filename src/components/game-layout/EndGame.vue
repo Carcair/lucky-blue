@@ -1,5 +1,5 @@
 <template>
-    <div id="end-game">
+    <div id="end-game" v-animate-css="'slideInLeft'">
         <Header />
 
         <div id="komb">

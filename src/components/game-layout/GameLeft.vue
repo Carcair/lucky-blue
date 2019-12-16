@@ -1,5 +1,5 @@
 <template>
-    <div id="left">
+    <div id="left" v-animate-css="'slideInLeft'">
 
         <!-- ako je kraj == true pokazati će ovaj div, kada bude kraj == false, to znači da ne možemo više unositi tikete, odn. počela je igra -->
         <div v-if="kraj">
@@ -7,24 +7,27 @@
             <!-- prekidac je varijabla pomoću koje ćemo prikazati ili sakriti prozor sa brojevima
             prekidac je true na početku, false kada kliknemo na Get Ticket i opet true kada kliknemo
             na "x" button -->
-            <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
+            <transition name="custom-classes-transition" enter-active-class="animated slideInLeft" leave-active-class="animated slideOutLeft" mode="out-in">
+                <button  id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
             
-            <div  v-else id="tiket">
-                <button id="esc" v-on:click="changePrekidac()">x</button>
-                <br><br>
 
-                <!-- pravi button za svaki element u nizBr, element u ovom slučaju nazivamo broj i uzimamo njegovu vrijednost i ispisujemo unutar buttona -->
-                <button class="btn" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
-                
-                <hr>
-                <!-- pravi button za svaki element (kojeg smo ovdje nazvali brojKomb) u nizu komb i ispisuje njegovu vrijednost -->
-                <button class="btn-izabrani" v-bind:key="'A' + brojKomb" v-for="brojKomb in komb" disabled>{{brojKomb}}</button>
-            </div>
+                <div v-else id="tiket">
+                    <button id="esc" v-on:click="changePrekidac()">x</button>
+                    <br><br>
+
+                    <!-- pravi button za svaki element u nizBr, element u ovom slučaju nazivamo broj i uzimamo njegovu vrijednost i ispisujemo unutar buttona -->
+                    <button class="btn" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
+                    
+                    <hr>
+                    <!-- pravi button za svaki element (kojeg smo ovdje nazvali brojKomb) u nizu komb i ispisuje njegovu vrijednost -->
+                    <button class="btn-izabrani" v-bind:key="'A' + brojKomb" v-for="brojKomb in komb" disabled>{{brojKomb}}</button>
+                </div>
+            </transition>
         </div>
 
         <!-- ako je kraj == false -->
         <p v-else>Ne možete više birati tikete</p>
-        <p>Broj tiketa: {{tiketi-1}}</p>
+        <p v-if="prekidac">Broj tiketa: {{tiketi-1}}</p>
     </div>
 </template>
 
@@ -57,6 +60,7 @@ export default {
 
         setTimeout(function() {
             self.kraj = false;
+            self.prekidac = true;
         }, 120000);
     },
     methods: {
