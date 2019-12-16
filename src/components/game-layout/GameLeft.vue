@@ -146,7 +146,7 @@ export default {
     }
 
     #get-tiket {
-        background-color: coral;
+        background-color: rgba(250, 127, 80, 0.8);
         font-size: 24px;
         border: none;
         border-radius: 25px;
