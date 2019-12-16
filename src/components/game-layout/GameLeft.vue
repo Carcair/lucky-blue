@@ -8,6 +8,7 @@
             prekidac je true na početku, false kada kliknemo na Get Ticket i opet true kada kliknemo
             na "x" button -->
             <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
+            
             <div  v-else id="tiket">
                 <button id="esc" v-on:click="changePrekidac()">x</button>
                 <br><br>
