@@ -78,8 +78,8 @@ export default {
         niz.push(0);
       });
 
-      // Za svaku korisničku kombinaciju provjeravat ćemo da li ima jednu od vrijednosti iz dobitne kombinacije
-      // Ukoliko ima povećavamo broj pogodaka u pomoćnom nizu broja sa indeksom tiketa kojeg provjeravamo
+      /* Za svaku korisničku kombinaciju provjeravat ćemo da li ima jednu od vrijednosti iz dobitne kombinacije
+      Ukoliko ima povećavamo broj pogodaka u pomoćnom nizu broja sa indeksom tiketa kojeg provjeravamo */
       korNiz.forEach(function(obj, indeks){
         dobNiz.forEach(function(broj){
           if(obj.komb.includes(broj)){
@@ -92,8 +92,8 @@ export default {
 
       this.najvisePogodaka = max;
 
-      // Uzimamo indeks iz pomoćnog niza svakog broja koji odgovara maksimalnom broju pogodaka
-      // I šaljemo nizu objekata koji se sastoji iz dobitnih tiketa
+      /* Uzimamo indeks iz pomoćnog niza svakog broja koji odgovara maksimalnom broju pogodaka
+       I šaljemo nizu objekata koji se sastoji iz dobitnih tiketa */
       niz.forEach(function(broj, indeks){
         if(broj === max){
           self.pogodci.push(self.userKombinacije[indeks]);

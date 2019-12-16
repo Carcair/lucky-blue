@@ -17,12 +17,13 @@ export default {
 </script>
 
 <style>
+* {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 body {
   margin: 0; padding: 0;
-  background-image: url("./assets/Bubanj.png"), url("./assets/PodlogaL.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 40%, center;
-  background-size: 60vh, 100% 100%;
+  background-image: url("./assets/PodlogaL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
   background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;

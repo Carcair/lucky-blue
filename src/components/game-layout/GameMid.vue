@@ -23,9 +23,9 @@ export default {
     },
     methods: {
 
-        // Sa obzirom da se sve naše varijable nalaze u komponenti Game.vue, morat ćemo još jednom
-        // emitovati vrijednosti u slijedeću parent komponentu (odn. iz GameMid.vue u Game.vue)
-        // funkcija addBrojBubanj će uzeti varijablu prosljeđenu sa $emit iz child komponente Bubanj
+        /* Sa obzirom da se sve naše varijable nalaze u komponenti Game.vue, morat ćemo još jednom
+        emitovati vrijednosti u slijedeću parent komponentu (odn. iz GameMid.vue u Game.vue)
+        funkcija addBrojBubanj će uzeti varijablu prosljeđenu sa $emit iz child komponente Bubanj */
         
         addBrojBubanj: function(zadnjiBr){
             this.$emit('add-broj', zadnjiBr);

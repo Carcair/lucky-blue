@@ -151,7 +151,6 @@ export default {
         border: none;
         border-radius: 25px;
         width: 150px;
-        margin-top: 20%;
     }
 
     #esc:hover, .btn:hover, #get-tiket:hover {
@@ -175,6 +174,7 @@ export default {
             display: block;
             margin: 0 auto;
             width: 100%;
+            text-align: left;
         }
         #get-tiket {
             margin-top: 0;

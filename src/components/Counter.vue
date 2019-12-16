@@ -76,8 +76,25 @@ export default {
     div {
         width: 100%;
         text-align: center;
-        font-size: 32px;
+        font-size: 10vh;
         position: absolute;
-        bottom: 30%;
+        bottom: 20%;
+    }
+
+    #brojac {
+        background: rgba(169, 169, 169, 0.5);
+        border-radius: 15vh;
+        width: 50vh;
+        margin: 0 auto; padding: 2vh 2vw; 
+    }
+
+    @media only screen and (max-width: 600px){
+        div {
+            font-size: 10vw;
+            bottom: 20%;
+        }
+        #brojac {
+            width: 40vw;
+        }
     }
 </style>

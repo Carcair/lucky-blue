@@ -33,7 +33,7 @@ export default {
         display: block;
         margin: 0 auto;
         text-align: center;
-        padding: 10px;
+        padding: 10px; margin-top: 7vh;
         line-height: 25px;
         background-color: rgba(169, 169, 169, 0.5);
         border-radius: 10px;

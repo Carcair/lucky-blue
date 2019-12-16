@@ -25,8 +25,9 @@ export default {
         margin: 0 15px 0 0;
         padding: 15px;
         float: right;
-        border: none; border-radius: 15%;
+        border: none; border-radius: 3vh;
         background-color: rgb(230, 154, 13);
+        font-weight: bold;
     }
 
     .header button:hover {
@@ -36,5 +37,9 @@ export default {
     .header img {
         height: 50px;
         margin: 0;
+    }
+
+    @media only screen and (max-width: 600px){
+        .header {padding: 3vh 0 0 5vw;};
     }
 </style>
