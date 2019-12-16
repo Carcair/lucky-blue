@@ -1,9 +1,12 @@
 <template>
     <div id="left">
 
-        <!-- ako je kraj == true pokazati će ovaj div -->
+        <!-- ako je kraj == true pokazati će ovaj div, kada bude kraj == false, to znači da ne možemo više unositi tikete, odn. počela je igra -->
         <div v-if="kraj">
 
+            <!-- prekidac je varijabla pomoću koje ćemo prikazati ili sakriti prozor sa brojevima
+            prekidac je true na početku, false kada kliknemo na Get Ticket i opet true kada kliknemo
+            na "x" button -->
             <button id="get-tiket" v-if="prekidac" v-on:click="changePrekidac()">Get Ticket</button>
             <div  v-else id="tiket">
                 <button id="esc" v-on:click="changePrekidac()">x</button>
@@ -61,7 +64,7 @@ export default {
             // Prekidač koji s kojim otvaramo prozor kad biramo brojeve za tiket
             // True bit će prikazan, false nećemo ga viditi
             // U slučaju ako je false sa this.komb = [] praznimo niz tako da nam ne ostaju brojevi
-            // koje smo možda već unijeli, odn. prekidamo unost
+            // koje smo možda već unijeli, odn. prekidamo unos
 
             if(this.prekidac == false){
                 this.komb = [];
