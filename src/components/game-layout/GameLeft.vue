@@ -117,6 +117,8 @@ export default {
         z-index: 1;
     }
 
+    p {font-size: 4vh;}
+
     #tiket {
         background-color: rgba(169, 169, 169, 0.4);
         padding: 10px;
@@ -136,18 +138,18 @@ export default {
     }
 
     .btn {
-        border: none;
         box-sizing: border-box;
         background-image: radial-gradient(white, gray);
         border: 2px solid white;
-        height: 40px; width: 40px;
+        height: 5vw; width: 5vw;
         margin: 5px;
         border-radius: 50%;
+        font-size: 3vw;
     }
 
     #get-tiket {
         background-color: rgba(250, 127, 80, 0.8);
-        font-size: 24px;
+        font-size: 3vw;
         border: none;
         border-radius: 25px;
         width: 150px;
@@ -159,26 +161,33 @@ export default {
     }
 
     .btn-izabrani {
-        border: none;
         box-sizing: border-box;
         background-image: radial-gradient(white, blue);
         color: black;
         border: 2px solid white;
-        height: 40px; width: 40px;
+        height: 5vw; width: 5vw;
         margin: 5px;
         border-radius: 50%;
+        font-size: 3vw;
     }
 
     @media only screen and (max-width: 600px){
         #left {
             display: block;
-            margin: 0 auto;
+            margin: 0 auto; padding: 0;
             width: 100%;
             text-align: left;
         }
         #get-tiket {
-            margin-top: 0;
+            margin: 10px;
+            font-size: 7vw;
         }
-        .btn {width: 10vw; height: 10vw;}
+        #tiket {
+            width: 80%; height: 85vh;
+            margin: 0; padding: 0;
+        }
+        .btn {width: 10vw; height: 10vw; font-size: 3vh;}
+        .btn-izabrani {width: 10vw; height: 10vw;margin-left: 0; font-size: 3vh;}
+        p {margin: 10px;}
     }
 </style>

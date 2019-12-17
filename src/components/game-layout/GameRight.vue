@@ -23,13 +23,13 @@ export default {
     }
 
     .broj {
-        border: none;
         box-sizing: border-box;
         background-image: radial-gradient(white, blue);
         border: 2px solid white;
-        height: 40px; width: 40px;
+        height: 5vw; width: 5vw;
         margin: 5px;
         border-radius: 50%;
+        font-size: 3vw;
     }
 
     @media only screen and (max-width: 600px){
@@ -37,6 +37,9 @@ export default {
             width: 20%; height: 85vh;
             margin: 0; padding-top: 40px;
             background: rgba(169, 169, 169, 0.7);
+        }
+        .broj {
+            width: 10vw; height: 10vw; font-size: 3vh;
         }
     }
 </style>

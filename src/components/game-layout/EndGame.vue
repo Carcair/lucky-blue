@@ -41,22 +41,22 @@ export default {
         text-align: center;
         font-size: 48px;
     }
+
+    p {font-size: 4vh;}
     
     .broj {
-        border: none;
         box-sizing: border-box;
         background-image: radial-gradient(white, blue);
         border: 2px solid white;
-        height: 40px; width: 40px;
+        width: 10vw; height: 10vw; font-size: 3vh;
         margin: 5px;
         border-radius: 50%;
     }
     .brojD {
-        border: none;
         box-sizing: border-box;
         background-image: radial-gradient(white, crimson);
         border: 2px solid white;
-        height: 40px; width: 40px;
+        width: 10vw; height: 10vw; font-size: 3vh;
         margin: 5px;
         border-radius: 50%;
     }
