@@ -1,6 +1,8 @@
 <template>
     <div>
-        <p id="bubanj">{{zadnjiBr}}</p>
+        <transition name="roll">
+            <p v-if="roll" id="bubanj">{{zadnjiBr}}</p>
+        </transition>
     </div>
 </template>
 
@@ -11,6 +13,7 @@ export default {
     data: function() {
         return {
             zadnjiBr: "",
+            roll: true
         }
     },
     created: function() {
@@ -41,7 +44,11 @@ export default {
                 var roll = setInterval(function(){
                     var temp = Math.floor(Math.random() * k + 1); // Biramo nasumični indeks i proslijeđujemo ga nizu
                     self.zadnjiBr = niz[temp];
-                }, 200);
+                }, 1000);
+
+                var rollAnimate = setInterval(function(){
+                    self.roll = !self.roll;
+                }, 1000);
 
                 /* Nakon 5 sekundi, animacija definisana sa setInterval() se prekida,
                 Izbacuje se broj u nizu, smanjujemo indeks za jedan i šaljemo taj broj u 
@@ -49,15 +56,18 @@ export default {
 
                 setTimeout(function(){
                     clearInterval(roll);
+                    clearInterval(rollAnimate);
+
                     niz.splice(niz.indexOf(self.zadnjiBr), 1);
                     k--; // smanjujemo broj indeksa
+                    self.roll = true;
 
                     /* this.$emit("ime-eventa", varijablu koju šaljemo)
                     kada šaljemo vrijednosti iz child elementa u njegov parent element
                     (komponenta Bubanj.vue se ubacuje u komponentu GameMid.vue) */
                     self.$emit("add-broj-bubanj", self.zadnjiBr);
-                }, 5000);
-            }, 123000 + (i*7000));
+                }, 6000);
+            }, 122000 + (i*7000));
         }
     },
     methods: {}
@@ -76,5 +86,23 @@ export default {
         background-repeat: no-repeat;
         background-size: 50vh 50vh; height: 50vh; width: 50vh;
         line-height: 50vh;
+    }
+
+    .roll-enter-active {
+        animation: roll-in .5s;
+    }
+    .roll-leave-active {
+        animation: roll-in .5s reverse;
+    }
+
+    @keyframes roll-in {
+        0% {
+            transform: scale(1) rotateZ(0deg) translateX(-0px);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1) rotateZ(360deg) translateX(0px);
+            opacity: 1;
+        }
     }
 </style>
