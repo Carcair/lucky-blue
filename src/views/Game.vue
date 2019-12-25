@@ -3,7 +3,7 @@
     <!-- bindamo vrijednosti koje želimo poslati u child komponentu za odgovarajući prop -->
     <EndGame v-if="prekidac" v-bind:niz="pogodci" v-bind:najvisePogodaka="najvisePogodaka" v-bind:dobitnaKombinacija="dobitnaKombinacija" />
 
-    <div v-else>
+    <div v-else class="container">
 
       <!-- Funkcija addKomb će se pokrenuti sa eventom add-komb pokrenut u GameLeft.vue iz uzet će vrijednost proslijeđenu u njemi -->
       <GameLeft v-on:add-komb="addKomb" />
@@ -107,10 +107,10 @@ export default {
 <style scoped>
   #game {
     box-sizing: border-box;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    min-height: 100vh;
-    padding-bottom: 14vh;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 20vh 50vh 20vh;
   }
 </style>

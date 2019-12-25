@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <Header />
-    <router-link to="/game"><img id="logo" src="../assets/LOGO.png" title="Play Lucky Blue"></router-link>
-    <router-link to="/game"><img class="btn" src="../assets/PlayOrange.png" title="Play Lucky Blue"></router-link>
-    <router-link to="/how-to"><img class="btn" src="../assets/HelpOrange.png" title="How to"></router-link>
+    <div class="container">
+      <router-link to="/game"><img id="logo" src="../assets/LOGO.png" title="Play Lucky Blue"></router-link>
+      <router-link to="/game"><img class="btn" src="../assets/PlayOrange.png" title="Play Lucky Blue"></router-link>
+      <router-link to="/how-to"><img class="btn" src="../assets/HelpOrange.png" title="How to"></router-link>
+    </div>
   </div>
 </template>
 
@@ -18,16 +20,26 @@ export default {
 </script>
 
 <style scoped>
+  .home {
+    width: 100vw;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 40vh 15vh 15vh;
+    align-content: space-around;
+  }
+
   #logo {
-    width: 65vh;
+    height: 25vh;
     display: block;
-    margin: 2% auto;
+    margin: 10% auto;
   }
 
   .btn {
+    height: 8vh;
     display: block;
-    height: 50px;
-    margin: 2% auto; 
+    margin: 0% auto; 
   }
 
   @media only screen and (max-width: 600px){

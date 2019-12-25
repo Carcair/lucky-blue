@@ -1,8 +1,10 @@
 <template>
     <div class="header">
-        <router-link to="/about"><button>About</button></router-link>
-        <router-link to="/"><button>Home</button></router-link>
         <img src="../../assets/LOGO.png" />
+        <div></div>
+        <div></div>
+        <router-link to="/"><button>Home</button></router-link>
+        <router-link to="/about"><button>About</button></router-link>
     </div>
 </template>
 
@@ -14,20 +16,22 @@ export default {
 
 <style scoped>
     .header {
-        height: 15vh; width: 100%;
+        height: 10vh; width: 100%;
         margin: 0;
-        padding: 25px 0 0 15px;
         box-sizing: border-box;
         background-color: rgba(169, 169, 169, 0.4);
+        display: grid;
+        grid-template-columns: 10vw 10vw 10vw 20vw 20vw;
+        justify-content: space-evenly;
+        align-content: center;
     }
 
     .header button {
-        margin: 0 15px 0 0;
-        padding: 15px;
-        float: right;
-        border: none; border-radius: 3vh;
+        padding: 1vh;
+        border: none; border-radius: 1vh;
         background-color: rgb(230, 154, 13);
         font-weight: bold;
+        font-size: 3vh
     }
 
     .header button:hover {
@@ -35,7 +39,7 @@ export default {
     }
 
     .header img {
-        height: 50px;
+        height: 6vh;
         margin: 0;
     }
 

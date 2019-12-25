@@ -35,13 +35,7 @@ export default {
 </script>
 
 <style scoped>
-    #mid {
-        background-color: rgba(169, 169, 169, 0.1);
-        box-sizing: border-box;
-        width: 50vw; height: 100%;
-        position: absolute;
-        left: 25vw;
-    }
+    
     @media only screen and (max-width: 600px){
         #mid {
             display: block;

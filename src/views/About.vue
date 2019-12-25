@@ -29,16 +29,16 @@ export default {
 
 <style scoped>
     .about p{
-        width: 350px;
+        width: 70vw;
+        font-size: 2vh;
         display: block;
         margin: 0 auto;
         text-align: center;
         padding: 10px; margin-top: 7vh;
-        line-height: 25px;
         background-color: rgba(169, 169, 169, 0.5);
-        border-radius: 10px;
+        border-radius: 1vh;
     }
     .about span{
-        font-size: 32px;
+        font-size: 3vh;
     }
 </style>

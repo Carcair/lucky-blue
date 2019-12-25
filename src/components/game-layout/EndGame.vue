@@ -37,9 +37,8 @@ export default {
 <style scoped>
     .a {
         width: 100vw;
-        line-height: 100px;
         text-align: center;
-        font-size: 48px;
+        font-size: 4vh;
     }
 
     p {font-size: 4vh;}

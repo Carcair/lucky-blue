@@ -13,23 +13,20 @@ export default {
 
 <style scoped>
     #right {
-        background-color: rgba(169, 169, 169, 0.1);
-        box-sizing: border-box;
-        width: 25vw; height: 100%;
-        right: 0;
         position: absolute;
+        bottom: 10vh;
         text-align: center;
-        padding-top: 100px;
+        width: 100vw;
     }
 
     .broj {
         box-sizing: border-box;
         background-image: radial-gradient(white, blue);
         border: 2px solid white;
-        height: 5vw; width: 5vw;
-        margin: 5px;
+        height: 7vh; width: 7vh;
+        margin: 1vh 1vh 0 1vh;
         border-radius: 50%;
-        font-size: 3vw;
+        font-size: 3vh;
     }
 
     @media only screen and (max-width: 600px){

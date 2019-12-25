@@ -13,7 +13,7 @@ export default {
 <style scoped>
     .footer {
         box-sizing: border-box;
-        height: 15vh; width: 100%;
+        height: 10vh; width: 100%;
         bottom: 0;
         text-align: center;
         position: fixed;
@@ -21,6 +21,7 @@ export default {
         background-color: rgba(169, 169, 169, 0.4);
     }
     .footer p {
-        margin: 40px 0 0 0; padding: 0;
+        margin: 4vh 0 0 0; padding: 0;
+        font-size: 2vh;
     }
 </style>

@@ -20,7 +20,7 @@ export default {
 * {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 body {
   margin: 0; padding: 0;
-  background-image: url("./assets/PodlogaL.jpg");
+  background-image: url("./assets/PodlogaP.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;

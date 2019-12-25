@@ -1,5 +1,6 @@
 <template>
     <div id="left" v-animate-css="'slideInLeft'">
+        <span v-if="prekidac">Broj tiketa: {{tiketi-1}}</span>
 
         <!-- ako je kraj == true pokazati će ovaj div, kada bude kraj == false, to znači da ne možemo više unositi tikete, odn. počela je igra -->
         <div v-if="kraj">
@@ -26,8 +27,8 @@
         </div>
 
         <!-- ako je kraj == false -->
-        <p v-else>Ne možete više birati tikete</p>
-        <p v-if="prekidac">Broj tiketa: {{tiketi-1}}</p>
+        <p v-else>Ne možete više birati tikete!</p>
+        
     </div>
 </template>
 
@@ -108,16 +109,15 @@ export default {
 
 <style scoped>
     #left {
-        background-color: rgba(169, 169, 169, 0.1);
         padding: 10px 15px;
         box-sizing: border-box;
-        min-width: 25vw; height: 100%;
+        width: 100vw;
         text-align: center;
-        position: absolute;
+        position: absolute; top: 5vh;
         z-index: 1;
     }
 
-    p {font-size: 4vh;}
+    span, p {font-size: 4vh;}
 
     #tiket {
         background-color: rgba(169, 169, 169, 0.4);
@@ -141,18 +141,18 @@ export default {
         box-sizing: border-box;
         background-image: radial-gradient(white, gray);
         border: 2px solid white;
-        height: 5vw; width: 5vw;
+        height: 5vh; width: 5vh;
         margin: 5px;
         border-radius: 50%;
-        font-size: 3vw;
+        font-size: 3vh;
     }
 
     #get-tiket {
         background-color: rgba(250, 127, 80, 0.8);
-        font-size: 3vw;
+        font-size: 4vh;
         border: none;
-        border-radius: 25px;
-        width: 150px;
+        border-radius: 1vh;
+        padding: 1vh;
     }
 
     #esc:hover, .btn:hover, #get-tiket:hover {
@@ -165,10 +165,10 @@ export default {
         background-image: radial-gradient(white, blue);
         color: black;
         border: 2px solid white;
-        height: 5vw; width: 5vw;
+        height: 5vh; width: 5vh;
         margin: 5px;
         border-radius: 50%;
-        font-size: 3vw;
+        font-size: 3vh;
     }
 
     @media only screen and (max-width: 600px){
