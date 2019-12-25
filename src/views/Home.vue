@@ -33,7 +33,7 @@ export default {
   #logo {
     height: 25vh;
     display: block;
-    margin: 10% auto;
+    margin: 5% auto;
   }
 
   .btn {

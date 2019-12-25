@@ -10,8 +10,10 @@
   "dependencies": {
     "animate.css": "^3.7.2",
     "core-js": "^3.4.3",
+    "printd": "^1.4.1",
     "v-animate-css": "0.0.3",
     "vue": "^2.6.10",
+    "vue-html-to-paper": "^1.1.1",
     "vue-router": "^3.1.3",
     "vuex": "^3.1.2"
   },

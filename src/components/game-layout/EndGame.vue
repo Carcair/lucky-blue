@@ -47,7 +47,7 @@ export default {
         box-sizing: border-box;
         background-image: radial-gradient(white, blue);
         border: 2px solid white;
-        width: 10vh; height: 10vh; font-size: 3vh;
+        width: 7vh; height: 7vh; font-size: 3vh;
         margin: 5px;
         border-radius: 50%;
     }
@@ -55,7 +55,7 @@ export default {
         box-sizing: border-box;
         background-image: radial-gradient(white, crimson);
         border: 2px solid white;
-        width: 10vh; height: 10vh; font-size: 3vh;
+        width: 7vh; height: 7vh; font-size: 3vh;
         margin: 5px;
         border-radius: 50%;
     }

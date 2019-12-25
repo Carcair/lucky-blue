@@ -29,7 +29,7 @@ export default {
     GameLeft,
     GameRight,
     GameMid,
-    EndGame
+    EndGame,
   },
   data: function() {
     return {
@@ -39,6 +39,7 @@ export default {
       najvisePogodaka: 0,
       pogodci: [],
       prekidac: false,
+      zadnjiTiket: {}
     }
   },
   created() {
@@ -58,6 +59,8 @@ export default {
     // Uzima objekt koji sadrži i broj tiketa i kombinaciju, formira userKombinacije
     addKomb: function(newKomb) {
       this.userKombinacije.push(newKomb);
+      this.zadnjiTiket = newKomb;
+      this.tiketi++;
     },
 
     // Dodaje brojeve u niz dobitnaKombinacija
@@ -113,4 +116,6 @@ export default {
     display: grid;
     grid-template-rows: 20vh 50vh 20vh;
   }
+
+  
 </style>

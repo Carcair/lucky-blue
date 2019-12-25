@@ -1,18 +1,38 @@
 <template>
     <div>
-        <p id="brojac">{{brojac}}</p>
+        <p id="brojac">{{timer}}</p>
     </div>
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex';
+
 export default {
     name: 'counter',
-    data: function() {
+    data() {
         return {
-            brojac: "",
+            counterStr: '',
         }
     },
+    computed: {
+        ...mapState([
+            'counter',
+            'timer'
+        ]),
+        ...mapActions
+    },
+    methods: {
+        ...mapActions([
+            'action_counter',
+        ])
+    },
     created: function() {
+
+        this.action_counter();
+
+
+        // Primjera radi urađen je timer preko vuex plugina, u slučaju da bude potrebno kod ispod je bez vuex-a
+        /*
         var self = this;
         self.brojac = "02 : 00";
         var minuta = 2;
@@ -68,6 +88,7 @@ export default {
             //      2. i*7000, će osigurati da svaki counter bude pokrenut 7 sekundi nakon prijašnjeg ili
             //      i*7 sekundi nakon završetka 122 sekunde od početka naše igre
         }
+        */
     },
 }
 </script>

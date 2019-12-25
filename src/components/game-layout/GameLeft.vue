@@ -18,24 +18,32 @@
                     </div>
                     
                     <br><br>
-
+                    <span>ID tiketa: {{tiketi}}</span><br>
                     <!-- pravi button za svaki element u nizBr, element u ovom slučaju nazivamo broj i uzimamo njegovu vrijednost i ispisujemo unutar buttona -->
                     <button class="btn" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
                     
                     <hr>
                     <!-- pravi button za svaki element (kojeg smo ovdje nazvali brojKomb) u nizu komb i ispisuje njegovu vrijednost -->
+                    
                     <button class="btn-izabrani" v-bind:key="'A' + brojKomb" v-for="brojKomb in komb" disabled>{{brojKomb}}</button>
+                    
                 </div>
             </transition>
         </div>
 
         <!-- ako je kraj == false -->
         <p v-else>Ne možete više birati tikete!</p>
-        
+        <div id="printMe" style="display:none">
+            <p># {{tiketi}}</p>
+            <ul>
+                <li v-bind:key="'C' + brojKomb" v-for="brojKomb in komb">{{brojKomb}}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'gameLeft',
     data: function() {
@@ -45,6 +53,8 @@ export default {
             tiketi: 1, // broj tiketa koji je slijedeći
             prekidac: true, // prekidac s kojim otvaramo ili zatvaramo prozor za biranje tiketa
             kraj: true, // prekidac koji oznacava kraj perioda za biranje tiketa
+
+            cssStyle: 'p {font-weight: bold; font-style: italic} ul {list-style: none;}'
         }
     },
     created: function() {
@@ -98,14 +108,43 @@ export default {
                     komb: this.komb,
                 };
                 if(this.komb.length == 7){
+                    this.printMe(newKomb);
                     this.komb = [];
                     this.tiketi++;
                     this.$emit('add-komb', newKomb);
                     this.prekidac = !this.prekidac;
                 }
             }
-        }
+        },
+        printMe(obj) {
+            // Funkcija $htmlToPaper('id') koristi Vue plugin vue-html-to-paper za printanje html taga
+            //this.$htmlToPaper('printMe');
 
+            const WinPrint = window.open('', '', 'left=0,top=0,width=300,height=500,toolbar=0,scrollbars=0,status=0');
+
+            WinPrint.document.write(`
+                <head>
+                    <style>${this.cssStyle}</style>
+                </head>
+                <body>
+                    <p>#${obj.brTiketa}</p>
+                    <ul>
+                        <li>${obj.komb[0]}</li>
+                        <li>${obj.komb[1]}</li>
+                        <li>${obj.komb[2]}</li>
+                        <li>${obj.komb[3]}</li>
+                        <li>${obj.komb[4]}</li>
+                        <li>${obj.komb[5]}</li>
+                        <li>${obj.komb[6]}</li>
+                    </ul>
+                </body>
+            `);
+
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+        }
     }
 }
 </script>
