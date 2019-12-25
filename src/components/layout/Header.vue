@@ -46,4 +46,10 @@ export default {
     @media only screen and (max-width: 600px){
         .header {padding: 3vh 0 0 5vw;};
     }
+
+    @media (orientation: landscape) {
+        .header {
+            grid-template-columns: 10vw 15vw 15vw 5vw 5vw;
+        }
+    }
 </style>

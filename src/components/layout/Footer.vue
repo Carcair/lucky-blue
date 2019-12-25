@@ -24,4 +24,8 @@ export default {
         margin: 4vh 0 0 0; padding: 0;
         font-size: 2vh;
     }
+
+    @media (orientation: landscape) {
+        .footer p {font-size: 3vh;}
+    }
 </style>

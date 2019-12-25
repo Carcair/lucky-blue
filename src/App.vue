@@ -38,4 +38,14 @@ body {
     background-attachment: fixed;
   }
 }
+
+@media (orientation: landscape) {
+  body {
+    background-image: url("./assets/PodlogaL.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+  }
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="left" v-animate-css="'slideInLeft'">
-        <span v-if="prekidac">Broj tiketa: {{tiketi-1}}</span>
+        <span>Broj tiketa: {{tiketi-1}}</span>
 
         <!-- ako je kraj == true pokazati će ovaj div, kada bude kraj == false, to znači da ne možemo više unositi tikete, odn. počela je igra -->
         <div v-if="kraj">
@@ -13,7 +13,10 @@
             
 
                 <div v-else id="tiket">
-                    <button id="esc" v-on:click="changePrekidac()">x</button>
+                    <div id="esc-div">
+                        <button id="esc" v-on:click="changePrekidac()">x</button>
+                    </div>
+                    
                     <br><br>
 
                     <!-- pravi button za svaki element u nizBr, element u ovom slučaju nazivamo broj i uzimamo njegovu vrijednost i ispisujemo unutar buttona -->
@@ -128,13 +131,18 @@ export default {
         cursor: pointer;
     }
 
+    #esc-div {
+        text-align: right;
+    }
+
     #esc {
         border: none;
         color: white; background-color: rgba(255, 0, 0, 0.5);
         border-radius: 50%;
         padding: 4px 8px;
-        float:right;
         font-weight: bold;
+        height: 5vh; width: 5vh;
+        font-size: 3vh;
     }
 
     .btn {
@@ -158,6 +166,7 @@ export default {
     #esc:hover, .btn:hover, #get-tiket:hover {
         background: bisque;
         color:black;
+        
     }
 
     .btn-izabrani {
@@ -189,5 +198,10 @@ export default {
         .btn {width: 10vw; height: 10vw; font-size: 3vh;}
         .btn-izabrani {width: 10vw; height: 10vw;margin-left: 0; font-size: 3vh;}
         p {margin: 10px;}
+    }
+
+    @media (orientation: landscape) {
+        .btn {width: 10vh; height: 10vh; font-size: 5vh;}
+        .btn-izabrani {width: 10vh; height: 10vh;margin-left: 0; font-size: 5vh;}
     }
 </style>

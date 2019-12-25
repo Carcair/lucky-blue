@@ -24,5 +24,6 @@ export default {
 </script>
 
 <style scoped>
-
+h3 {font-size: 7vh; margin: 1vh;}
+ul {font-size: 4vh; margin: 2vh;}
 </style>
