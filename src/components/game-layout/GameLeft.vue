@@ -53,8 +53,6 @@ export default {
             tiketi: 1, // broj tiketa koji je slijedeći
             prekidac: true, // prekidac s kojim otvaramo ili zatvaramo prozor za biranje tiketa
             kraj: true, // prekidac koji oznacava kraj perioda za biranje tiketa
-
-            cssStyle: 'p {font-weight: bold; font-style: italic} ul {list-style: none;}'
         }
     },
     created: function() {
@@ -120,30 +118,58 @@ export default {
             // Funkcija $htmlToPaper('id') koristi Vue plugin vue-html-to-paper za printanje html taga
             //this.$htmlToPaper('printMe');
 
-            const WinPrint = window.open('', '', 'left=0,top=0,width=300,height=500,toolbar=0,scrollbars=0,status=0');
+            const WinPrint = window.open('', '', 'left=0,top=0,width=345,height=545,toolbar=0,scrollbars=0,status=0');
 
             WinPrint.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
                 <head>
-                    <style>${this.cssStyle}</style>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                    <title>Document</title>
+                    <style>
+                        .container {text-align: center; height: 480px; width: 300px; border: 1px solid black;}
+                        .container ul {list-style: none;}
+                        #tiket {font-size: 24px; font-style: italic;}
+                        span {font-weight: bold;}
+                        .brojevi p {
+                            width: 20px;
+                            margin: 5px auto;
+                            font-size: 16px;
+                            border: 1px solid black;
+                            border-radius: 10px;
+                        }
+                    </style>
                 </head>
                 <body>
-                    <p>#${obj.brTiketa}</p>
-                    <ul>
-                        <li>${obj.komb[0]}</li>
-                        <li>${obj.komb[1]}</li>
-                        <li>${obj.komb[2]}</li>
-                        <li>${obj.komb[3]}</li>
-                        <li>${obj.komb[4]}</li>
-                        <li>${obj.komb[5]}</li>
-                        <li>${obj.komb[6]}</li>
-                    </ul>
+                    <div class="container">
+                        <img src="https://lucky-blue.netlify.com/img/LOGO.aff925a3.png" height="100px" alt="pic">
+                        <hr>
+                        <p id="tiket">Tiket: <span>#${obj.brTiketa}</span></p>
+                        <hr>
+                        <div class="brojevi">
+                            <p>${obj.komb[0]}</p>
+                            <p>${obj.komb[1]}</p>
+                            <p>${obj.komb[2]}</p>
+                            <p>${obj.komb[3]}</p>
+                            <p>${obj.komb[4]}</p>
+                            <p>${obj.komb[5]}</p>
+                            <p>${obj.komb[6]}</p>
+                        </div>
+                        <hr>
+                        <p>Lucky Blue by @SPARK</p>
+                    </div>
                 </body>
+                </html>
             `);
 
             WinPrint.document.close();
             WinPrint.focus();
-            WinPrint.print();
-            WinPrint.close();
+            setTimeout(() => {
+                WinPrint.print();
+                WinPrint.close();
+            }, 1000);
         }
     }
 }
@@ -202,10 +228,21 @@ export default {
         padding: 1vh;
     }
 
-    #esc:hover, .btn:hover, #get-tiket:hover {
-        background: bisque;
+    #esc:hover, .btn:hover  {
+        background: radial-gradient(white, blue);
         color:black;
-        
+    }
+    #get-tiket:hover {background-color: gray;}
+
+    .btn:hover, #esc:hover, .btn-izabrani:hover, #get-tiket:hover {
+        animation: pop 1s ease;
+        -webkit-animation: pop 1s ease;
+        animation-iteration-count: infinite;
+    }
+    @keyframes pop {
+        0% {transform: scale(1)}
+        50% {transform: scale(1.2)}
+        100% {transform: scale(1)}
     }
 
     .btn-izabrani {

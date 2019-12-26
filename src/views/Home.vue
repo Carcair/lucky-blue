@@ -2,9 +2,9 @@
   <div class="home">
     <Header />
     <div class="container">
-      <router-link to="/game"><img id="logo" src="../assets/LOGO.png" title="Play Lucky Blue"></router-link>
-      <router-link to="/game"><img class="btn" src="../assets/PlayOrange.png" title="Play Lucky Blue"></router-link>
-      <router-link to="/how-to"><img class="btn" src="../assets/HelpOrange.png" title="How to"></router-link>
+      <router-link to="/game"><img id="logo" class="pop" src="../assets/LOGO.png" title="Play Lucky Blue"></router-link>
+      <router-link to="/game"><img class="btn pop" src="../assets/PlayOrange.png" title="Play Lucky Blue"></router-link>
+      <router-link to="/how-to"><img class="btn pop" src="../assets/HelpOrange.png" title="How to"></router-link>
     </div>
   </div>
 </template>
@@ -40,6 +40,16 @@ export default {
     height: 8vh;
     display: block;
     margin: 0% auto; 
+  }
+  
+  .pop:hover {
+    animation: pop 1s ease;
+  }
+
+  @keyframes pop {
+    0% {transform: scale(1)}
+    50% {transform: scale(1.2)}
+    100% {transform: scale(1)}
   }
 
   @media only screen and (max-width: 600px){

@@ -1,5 +1,5 @@
 <template>
-    <div id="end-game" v-animate-css="'slideInLeft'">
+    <div id="end-game" v-animate-css="'bounce'">
         <Header />
 
         <div id="komb">
@@ -63,5 +63,15 @@ export default {
     .dobitak, #komb {
         width: 100vw;
         text-align: center;
+    }
+    .broj:hover, .brojD:hover {
+        animation: pop 1s ease;
+        -webkit-animation: pop 1s ease;
+        animation-iteration-count: infinite;
+    }
+    @keyframes pop {
+        0% {transform: scale(1)}
+        50% {transform: scale(1.2)}
+        100% {transform: scale(1)}
     }
 </style>
