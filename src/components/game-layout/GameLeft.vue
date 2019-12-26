@@ -33,12 +33,6 @@
 
         <!-- ako je kraj == false -->
         <p v-else>Ne možete više birati tikete!</p>
-        <div id="printMe" style="display:none">
-            <p># {{tiketi}}</p>
-            <ul>
-                <li v-bind:key="'C' + brojKomb" v-for="brojKomb in komb">{{brojKomb}}</li>
-            </ul>
-        </div>
     </div>
 </template>
 
@@ -114,10 +108,14 @@ export default {
                 }
             }
         },
-        printMe(obj) {
-            // Funkcija $htmlToPaper('id') koristi Vue plugin vue-html-to-paper za printanje html taga
-            //this.$htmlToPaper('printMe');
 
+        // Funkcija za printanje, moguće je koristiti puno lakšu opciju
+        // instalirati vue-html-to-paper plugin koji nam omogućava printanje komponente koju
+        // proslijedimo toj funkciji
+        // Međutim, taj plug-in na zadržava stil komponente
+        // Ovdje koristimo malo "skupocjenu" funkciju
+        // Kreiramo "mini" HTML dokument sa svojim CSS-om i tražimo print tog HTML-a
+        printMe(obj) {
             const WinPrint = window.open('', '', 'left=0,top=0,width=345,height=545,toolbar=0,scrollbars=0,status=0');
 
             WinPrint.document.write(`
@@ -166,6 +164,9 @@ export default {
 
             WinPrint.document.close();
             WinPrint.focus();
+
+            // Funkcija koja će uzeti fokusirani HTML dokument WinPrint i izprintati ga
+            // pravimo timeout da print dialog ima vremena loadati sliku
             setTimeout(() => {
                 WinPrint.print();
                 WinPrint.close();

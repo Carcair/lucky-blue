@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <img src="../../assets/LOGO.png" />
+        <img src="../../assets/LOGO.png" v-animate-css.hover="'bounce'"/>
         <div></div>
         <div></div>
         <router-link to="/"><button>Home</button></router-link>

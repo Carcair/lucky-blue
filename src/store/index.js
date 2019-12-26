@@ -29,6 +29,10 @@ export default new Vuex.Store({
     }
   },
   actions: {
+
+    // Akcije su pokrenute od strane komponente, i one služe da pokrećemo mutacije koje se nalaze u store-u
+    // Akcija nam je potrebna zato što radimo sa asinhronim funkcijama, mutacije same od sebe nisu prilagođene
+    // asinhronim radnjama
     action_counter(context) {
       let cInt = setInterval(() => {
         context.commit('mutate_counter');

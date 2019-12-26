@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// importamo state i actions object iz vuex store-a
 import {mapState, mapActions} from 'vuex';
 
 export default {
@@ -15,6 +16,7 @@ export default {
         }
     },
     computed: {
+        // inicijaliziramo varijable iz state-a koje hoćemo koristiti
         ...mapState([
             'counter',
             'timer'
@@ -22,12 +24,14 @@ export default {
         ...mapActions
     },
     methods: {
+        // inicijaliziramo action iz state-a koji koristimo
         ...mapActions([
             'action_counter',
         ])
     },
     created: function() {
 
+        // pozivamo se na inicijalizirane var i akcije iz state-a sa this.
         this.action_counter();
 
 
