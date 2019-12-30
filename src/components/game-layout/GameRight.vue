@@ -29,6 +29,17 @@ export default {
         font-size: 3vh;
     }
 
+    .broj:hover {
+        animation: pop 1s ease;
+        -webkit-animation: pop 1s ease;
+        animation-iteration-count: infinite;
+    }
+    @keyframes pop {
+        0% {transform: scale(1)}
+        50% {transform: scale(1.2)}
+        100% {transform: scale(1)}
+    }
+
     @media only screen and (max-width: 600px){
         #right {
             width: 20%; height: 85vh;

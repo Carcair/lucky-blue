@@ -35,12 +35,14 @@ export default {
 </script>
 
 <style scoped>
+    #mid {
+        display: grid;
+        grid-template-rows: 50% 40%;
+    }
     
     @media only screen and (max-width: 600px){
         #mid {
-            display: block;
-            width: 100%;
-            left: 0;
+            
         }
     }
 </style>
