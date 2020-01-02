@@ -31,7 +31,7 @@ export default {
   }
 
   #logo {
-    height: 25vh;
+    height: 25vh; width: 20vh;
     display: block;
     margin: 5% auto;
   }

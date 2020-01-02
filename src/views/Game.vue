@@ -117,5 +117,10 @@ export default {
     grid-template-rows: 20vh 50vh 20vh;
   }
 
-  
+  @media only screen and (max-width: 600px) {
+    .container {
+      display: block;
+      height: 100vh;
+    }
+  }
 </style>
