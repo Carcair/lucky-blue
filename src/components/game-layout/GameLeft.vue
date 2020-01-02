@@ -20,7 +20,7 @@
                     <br><br>
                     <span>ID tiketa: {{tiketi}}</span><br>
                     <!-- pravi button za svaki element u nizBr, element u ovom slučaju nazivamo broj i uzimamo njegovu vrijednost i ispisujemo unutar buttona -->
-                    <button class="btn" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
+                    <button v-bind:class="{'btn':!isClicked(broj),'btn-clicked':isClicked(broj)}" v-on:click="getBroj(broj)" v-bind:key="broj" v-for="broj in nizBr">{{broj}}</button>
                     
                     <hr>
                     <!-- pravi button za svaki element (kojeg smo ovdje nazvali brojKomb) u nizu komb i ispisuje njegovu vrijednost -->
@@ -107,6 +107,15 @@ export default {
                     this.prekidac = !this.prekidac;
                 }
             }
+        },
+
+        // Metoda za provjeru da li je taj broj kliknut u svrhu vezanja klase za button
+        // tako da broj koji smo izabrali ima drugu boju
+        isClicked(broj) {
+            if(this.komb.includes(broj))
+                return true
+            else
+                return false
         },
 
         // Funkcija za printanje, moguće je koristiti puno lakšu opciju
@@ -220,6 +229,15 @@ export default {
         border-radius: 50%;
         font-size: 3vh;
     }
+    .btn-clicked {
+        box-sizing: border-box;
+        background-image: radial-gradient(white, crimson);
+        border: 2px solid white;
+        height: 5vh; width: 5vh;
+        margin: 5px;
+        border-radius: 50%;
+        font-size: 3vh;
+    }
 
     #get-tiket {
         background-color: rgba(250, 127, 80, 0.8);
@@ -235,7 +253,7 @@ export default {
     }
     #get-tiket:hover {background-color: gray;}
 
-    .btn:hover, #esc:hover, .btn-izabrani:hover, #get-tiket:hover {
+    .btn:hover, .btn-clicked:hover, #esc:hover, .btn-izabrani:hover, #get-tiket:hover {
         animation: pop 1s ease;
         -webkit-animation: pop 1s ease;
         animation-iteration-count: infinite;
@@ -278,7 +296,7 @@ export default {
     }
 
     @media (orientation: landscape) {
-        .btn {width: 10vh; height: 10vh; font-size: 5vh;}
+        .btn, .btn-clicked {width: 10vh; height: 10vh; font-size: 5vh;}
         .btn-izabrani {width: 10vh; height: 10vh;margin-left: 0; font-size: 5vh;}
     }
 </style>
